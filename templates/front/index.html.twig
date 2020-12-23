@@ -1,556 +1,314 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FrontController!{% endblock %}
+{% block title %}Pakiet Pomocna Dłoń
+{% endblock %}
 
 {% block body %}
- <div id="landsacpe-hint">
-        <div id="logo"></div>
-        <div id="pict"></div>
-        <p>Obróć swoje urządzenie do pozycji pionowej</p>
-    </div>
-    
-    <header id="main-header">
-    <a class="wide" id="logo" href="/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl">
-        <div id="logo-icon"></div>
-        <div id="logo-cms">testowa-domena-krystiana.pl</div>
-    </a>
-    <a class="header-button btn-anim" id="sidebar-switcher" href="#"></a>
-    <a class="header-button qtip-on btn-anim" id="user-logout" href="/CMD_LOGOUT" title="Wyloguj"><i class="fa fa-sign-out"></i> <span class="hidden-xs-down">Wyloguj</span></a>
-    <a class="header-button buttons-sm-up qtip-on btn-anim" id="password-bt" href="/HTM_PASSWD?domain=testowa-domena-krystiana.pl" title="Zmiana hasła"><i class="fa fa-unlock-alt"></i> Hasło</a>
-    <a class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="/CMD_TICKET?domain=testowa-domena-krystiana.pl&sort1=-1" title="klewandowski">
-        
-<!--        <img src="/IMG_AVATAR"> -->
-        <i class="fa fa-user"></i>
-         klewandowski
-    </a>
-    
+
+{# {% block header %} #}
+<div id="landsacpe-hint">
+	<div id="logo"></div>
+	<div id="pict"></div>
+	<p>Obróć swoje urządzenie do pozycji pionowej</p>
+</div>
+
+<header id="main-header">
+	<a class="wide" id="logo" href="/home/index">
+		<div id="logo-icon"></div>
+		<div
+			id="logo-cms">{# {{ current_user.email }} #}
+		</div>
+	</a>
+	<a class="header-button btn-anim" id="sidebar-switcher" href="#">
+		<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+	</a>
+
+	<a class="header-button qtip-on btn-anim" id="user-logout" href="/logout" data-hasqtip="0" oldtitle="Wyloguj" title="">
+		<div style="display: flex;">
+			<div style="margin-right: 5px;">
+				<svg style="margin-top: 4px;" width="3em" height="3em" viewbox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+					<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+				</svg>
+			</div>
+			<div>
+				Wyloguj
+			</div>
+		</div>
+	</a>
+
+	<a class="header-button buttons-sm-up qtip-on btn-anim" id="password-bt" href="/editMyData/index" data-hasqtip="1" oldtitle="Zmiana hasła" title="">
+		<i class="fa fa-unlock-alt fa-2x"></i>
+		Hasło
+	</a>
+	<a class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="https://poczta.am1.pl/" data-hasqtip="2" aria-describedby="qtip-2">
+		<i class="fa fa-envelope fa-2x"></i>
+		<span class="hidden-md-down">Poczta</span>
+	</a>
 </header>
-    <nav id="main-sidebar" class="wide sm-hidden">
-    <div id="user-box">
-        <a id="user-avatar" href="/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl"><img src="/IMG_AVATAR"></a>
-        <div id="user-menu">
-            <p class="welcome">DZIEŃ DOBRY</p>
-            <p class="welcome-desc">Witamy w systemie do zarządzania kontem testowa-domena-krystiana.pl</p>
-<!--            <p class="user-last-login">Ostatnie logowanie: 21.02.2016 10:23</p>-->
-<!--            <a class="user-logout" href="/CMD_LOGOUT"><i class="fa fa-sign-out"></i> Wyloguj</a>-->
-            <a class="user-messages" href="/CMD_TICKET?domain=testowa-domena-krystiana.pl&sort1=-1">
-                
-                <i class="fa fa-envelope"></i>
-            </a>
-        </div>
-    </div>
-    
-    <ul id="main-buttons">
-        <li><a class="main-button active" data-submenu="dashboard"id="bt-dashboard" href="/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl"><i class="fa fa-home"></i><span>MOJE KONTO</span></a></li>
-        <li><a class="main-button" data-submenu="email" id="bt-email" href="/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl"><i class="fa fa-envelope"></i><span>KONTA E-MAIL</span></a></a></li>
-        <li><a class="main-button" data-submenu="domains" id="bt-domains" href="/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl"><i class="fa fa-globe fa-lg"></i><span>DOMENY</span></a></li>
-        
-        <li><a class="main-button" data-submenu="ftp" id="bt-ftp" href="/CMD_FTP?domain=testowa-domena-krystiana.pl"><i class="fa fa-files-o"></i><span>KONTA FTP</span></a></li>
-        
-        
-            <li><a class="main-button" data-submenu="db" id="bt-db" href="/CMD_DB?domain=testowa-domena-krystiana.pl"><i class="fa fa-database"></i><span>BAZY DANYCH</span></a></li>
-        
-        <li><a class="main-button" data-submenu="stats" id="bt-stats" href="/CMD_USER_STATS?domain=testowa-domena-krystiana.pl"><i class="fa fa-bar-chart"></i><span>STATYSTYKI</span></a></li>
-        <li><a class="main-button" data-submenu="backup" id="bt-backup" href="/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&section=backup"><i class="fa fa-clone"></i><span>BACKUP</span></a></li>
-    </ul>
-    <div id="submenu">
-        <div id="submenu-dashboard" class="submenu-wrap active">
-            <div class="submenu-title">MOJE KONTO</div>
-            <ul>
-                <li><a class="btn-anim" id="password" href="/HTM_PASSWD?domain=testowa-domena-krystiana.pl"><i class="fa fa-key"></i> Zmiana hasła</a></li>
-<!--                <li><a id="login-history" href="/CMD_LOGIN_HISTORY?domain=testowa-domena-krystiana.pl&section=dashboard"><i class="fa fa-history"></i> Historia logowań</a></li>-->
-                <li><a class="btn-anim" id="support-center" href="/CMD_TICKET?domain=testowa-domena-krystiana.pl"><i class="fa fa-medkit"></i> Pomoc techniczna</a></li>
-            </ul>
-        </div>
-        <div id="submenu-email" class="submenu-wrap">
-            <div class="submenu-title">KONTA E-MAIL</div>
-            <ul>
-                
-                    <li><a class="btn-anim" id="pop-email-accounts" href="/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl"><i class="fa fa-users"></i> Konta pocztowe</a></li>
-                
-                    <li><a class="btn-anim" id="pop-create" href="HTM_EMAIL_POP_CREATE?DOMAIN=testowa-domena-krystiana.pl&DEFAULT_POP_QUOTA=none&USER_CAN_SET_SEND_LIMIT=none&GLOBAL_PER_EMAIL_LIMIT=none"><i class="fa fa-plus"></i> Dodaj konto e-mail</a></li>
-                
-                    <li><a class="btn-anim" id="forwarders" href="/CMD_EMAIL_FORWARDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i> Przekierowania (aliasy)</a></li>
-                
-                
-                    <li><a class="btn-anim" id="autoresponders" href="/CMD_EMAIL_AUTORESPONDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-exchange"></i> Autorespondery</a></li>
-                
-                
-                    <li><a class="btn-anim" id="vac-messages" href="/CMD_EMAIL_VACATION?domain=testowa-domena-krystiana.pl"><i class="fa fa-sun-o"></i> Wiadomości urlopowe</a></li>
-                
-                
-                    <li><a class="btn-anim" id="spam-filters" href="/CMD_SPAMASSASSIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-filter"></i> Filtry poczty</a></li>
-                
-                
-            </ul>
-        </div>
-        
-        <div id="submenu-ftp" class="submenu-wrap">
-            <div class="submenu-title">KONTA FTP</div>
-            <ul>
-                <li><a class="btn-anim" id="ftp-managment" href="/CMD_FTP?domain=testowa-domena-krystiana.pl"><i class="fa fa-folder"></i> Zarządzanie kontami</a></li>
-                <li><a class="btn-anim" id="create-ftp" href="HTM_FTP_CREATE?DOMAIN=testowa-domena-krystiana.pl&owned=|OWNEDIP|"><i class="fa fa-plus"></i> Dodaj konto FTP</a></li>
-            </ul>
-        </div>
-        
-        
-        
-        <div id="submenu-db" class="submenu-wrap">
-            <div class="submenu-title">BAZY DANYCH</div>
-            <ul>
-                <li><a class="btn-anim" id="db-managment" href="/CMD_DB?domain=testowa-domena-krystiana.pl"><i class="fa fa-database"></i> Zarządzanie bazami</a></li>
-                <li><a class="btn-anim" id="create-db" href="CMD_DB_CREATE?DOMAIN=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i> Dodaj bazę danych</a></li>
-            </ul>
-        </div>
-        
-        
-        <div id="submenu-domains" class="submenu-wrap">
-            <div class="submenu-title">DOMENY</div>
-            <ul>
-                <li><a class="btn-anim" id="domain-setup" href="/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl"><i class="fa fa-globe"></i> Konfiguracja domen</a></li>
-                <li><a class="btn-anim" id="add-domain" href="HTM_ADD_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i> Dodaj domenę</a></li>
-                <li><a class="btn-anim" id="chenge-domain" href="/CMD_CHANGE_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-pencil-square-o"></i> Zmień nazwę domeny</a></li>
-                <li><a class="btn-anim" id="subdomain-managment" href="/CMD_SUBDOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-tasks"></i> Subdomeny</a></li>
-                <li><a class="btn-anim" id="domain-pointers" href="/CMD_DOMAIN_POINTER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i> Przekierowania</a></li>
-                <li><a class="btn-anim" id="domain-ssl" href="/CMD_SSL?domain=testowa-domena-krystiana.pl"><i class="fa fa-certificate"></i> Certyfikaty SSL</a></li>
-            </ul>
-        </div>
-        
-        <div id="submenu-stats" class="submenu-wrap">
-            <div class="submenu-title">STATYSTYKI</div>
-            <ul>
-                <li><a class="btn-anim" id="site-sum-stats-log" href="/CMD_USER_STATS?domain=testowa-domena-krystiana.pl"><i class="fa fa-pie-chart"></i> Statystyki serwisu</a></li>
-                <li><a class="btn-anim" id="email-usage" href="CMD_EMAIL_USAGE?domain=testowa-domena-krystiana.pl"><i class="fa fa-area-chart"></i>Statystyki poczty</a></li>
-            </ul>
-        </div>
-        
-        <div id="submenu-backup" class="submenu-wrap">
-            <div class="submenu-title">BACKUP</div>
-            <ul>
-                <li><a class="btn-anim" id="create-backups" href="/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&section=backup"><i class="fa fa-repeat"></i> Utwórz backup</a></li>
-            </ul>
-        </div>
-        
-        
-    </div>
-    <div class="clear"></div>
-    
+
+<nav id="main-sidebar" class="wide sm-hidden">
+	<div
+		id="user-box">
+		{# {% if current_user.img == null %} #}
+		<a id="user-avatar" href="/home/index"><img src="/img/avatar/userdefalut.png"></a>
+		{# {% else %}
+					<a id="user-avatar" href="/home/index"><img src="/img/avatar/{{ current_user.img }}"></a> #}
+		{# {% endif %} #}
+		<div id="user-menu">
+			<p class="welcome">DZIEŃ DOBRY</p>
+			<p class="welcome-desc">Witamy w systemie do zarządzania kontem
+				{# {{ current_user.email }} #}
+			</p>
+			<a class="user-messages" href="/mailToUs/index">
+				<i class="fa fa-envelope fa-2x"></i>
+			</a>
+		</div>
+	</div>
+
+	<ul id="main-buttons">
+		<li>
+			<a class="main-button " data-submenu="dashboard" id="bt-dashboard" href="/home/index">
+				<i class="fa fa-home fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">MOJE KONTO</span>
+			</a>
+		</li>
+		{# {% if current_user.access == "administrator" %} #}
+		<li>
+			<a class="main-button " data-submenu="email" id="bt-email" href="/addNewEmployee/showList">
+				<i class="fa fa-users fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">Pracownicy</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="domains" id="bt-domains" href="/addNewCustomer/showList">
+				<i class="fa fa-users fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">KLIENCI</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="poczta" id="bt-poczta" href="/mailToUs/mailBox">
+				<i class="fa fa-envelope fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">POCZTA Pakiet</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="poczta-centrum" id="bt-poczta-centrum" href="/mailToUs/mailBoxCentrum">
+				<i class="fa fa-envelope fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">POCZTA Centrum</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="messages" id="bt-messages" href="/addMessages/box">
+				<i class="fa fa-envelope fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">KOMUNIKATY</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="db" id="bt-db" href="/raportList/index">
+				<i class="fa fa-chart-pie fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">RAPORTY</span>
+			</a>
+		</li>
+		{# {% endif %} #}
+
+		<li>
+			<a class="main-button" data-submenu="ftp" id="bt-ftp" href="/taskList/index">
+				<i class="fa fa-tasks fa-2x fmt"></i>
+				<span style="font-size: 0.5rem;">ZADANIA</span>
+			</a>
+		</li>
+
+	</ul>
+	<div id="submenu">
+
+		<div id="submenu-dashboard" class="submenu-wrap" style="display: none;">
+			<div class="submenu-title">MOJE KONTO</div>
+			<ul>
+				<li><a class="btn-anim" id="password" href="/editMyData/index"><i class="fa fa-key fm-m"></i>Zmiana
+												hasła</a></li>
+				<li><a class="btn-anim" id="password" href="/editMyData/indexCategories"><i class="fa fa-key fm-m"></i>Kategorie</a></li>
+			</ul>
+		</div>
+		<div id="submenu-email" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">PRACOWNICY</div>
+			<ul>
+
+				<li><a class="btn-anim " id="pop-email-accounts" href="/addNewEmployee/new"><i class="fa fa-user-plus fm-m"></i>Dodaj pracownika</a></li>
+
+				<li><a class="btn-anim " id="pop-create" href="/addNewEmployee/showList"><i class="fa fa-list-ul fm-m"></i>Lista pracowników</a></li>
+
+			</ul>
+		</div>
+		<div id="submenu-domains" class="submenu-wrap" style="display: none;">
+			<div class="submenu-title">KLIENCI</div>
+			<ul>
+				<li><a class="btn-anim " id="pop-email-accounts" href="/addNewCustomer/new"><i class="fa fa-user-plus fm-m"></i>Dodaj klienta</a></li>
+
+				<li><a class="btn-anim " id="pop-create" href="/addNewCustomer/showList"><i class="fa fa-list-ul fm-m"></i>Lista klientów</a></li>
+				<li><a class="btn-anim " id="pop-create" href="/addNewPakiet/index"><i class="fa fa-plus fm-m"></i>Dodaj pakiet</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-ftp" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">ZADANIA</div>
+			<ul>
+				<li><a class="btn-anim " id="pop-email-accounts" href="/addNewTask/index"><i class="fa fa-plus fm-m"></i>Dodaj zadanie</a></li>
+
+				<li><a class="btn-anim " id="pop-create" href="/taskList/index"><i class="fa fa-list-ul fm-m"></i>Lista zadań</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-db" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">RAPORTY</div>
+			<ul>
+				<li>
+					<a class="btn-anim " id="pop-email-accounts" href="/raportList/index">
+						<i class="fa fa-chart-pie fm-m"></i>Bieżące - pakiet</a>
+				</li>
+
+				<li>
+					<a class="btn-anim " id="pop-create" href="/raportList/archival">
+						<i class="fa fa-archive fm-m"></i>Archiwalne - pakiet</a>
+				</li>
+				<li>
+					<a class="btn-anim " id="pop-create" href="/raportList/allraports">
+						<i class="fa fa-archive fm-m"></i>Wszystkie raporty</a>
+				</li>
+				<!-- <li><a class="btn-anim" id="pop-create" href="/raportList/allArchivalRaports"><i
+										class="fa fa-archive fm-m"></i>Wszystkie raporty</a></li> -->
+			</ul>
+		</div>
+
+		<div id="submenu-messages" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">KOMUNIKATY</div>
+			<ul>
+				<li><a class="btn-anim" id=" pop-email-accounts"
+												href=" /addMessages/index"><i class="fa fa-envelope fm-m"></i>Napisz komunikat</a></li>
+
+				<li><a class="btn-anim"  id=" pop-create"
+												href=" /addMessages/box"><i class="fa fa-archive fm-m"></i>Komunikaty</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-poczta" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">POCZTA</div>
+			<ul>
+				<li><a class="btn-anim"  id="pop-email-accounts"
+												href=" /mailToUs/index"><i class="fa fa-envelope fm-m"></i>Napisz do nas</a></li>
+
+				<li><a class="btn-anim"  id="pop-create"
+												href=" /mailToUs/mailBox"><i class="fa fa-archive fm-m"></i>Skrzynka odbiorcza</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-poczta-centrum" class="submenu-wrap " style="display: none;">
+			<div class="submenu-title">POCZTA2</div>
+			<ul>
+				<li><a class="btn-anim"  id="pop-create" href="/mailToUs/mailBoxCentrum"> <i class="fa fa-archive fm-m"></i>Skrzynka odbiorcza</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="clear"></div>
 </nav>
-<script>
-    var domains = getDomains();
-    var currentDomain = 'testowa-domena-krystiana.pl';
-    domains.forEach(function(item) {
-        if (currentDomain!=item) {
-            $('#form-domain #domain-select').append($('<option>', { 
-                value: item,
-                text : item
-            }));
-        }
-    });
-    
-    $(function(){
-        $('#form-domain #domain-select').change(function() {
-            location.href='/HTM_INDEX_USER?domain='+$(this).val();
-        });
-    });
-</script>
-    <div id="main-content" class="container-fluid sidebar-wide">
-        
+{# {% endblock %} #}
 
 
+<div id="main-content" class="container-fluid-Alp sidebar-wide">
+	{# {% block content %} #}
+
+	<div id="front-page">
+		{# {% block header1 %} #}
+		<div class="header-1">
+			<div class="left col-xl-6">
+				<span class="title">
+                 {# {% block header1Title %}{% endblock %} #}
+					</span>
+				</div>
+				<div class="right col-xl-6" id="title-buttons-bar">
+					<div id="title-buttons" class="pull-xl-right pull-xs-left">
+						<a class="title-button qtip-on btn-anim" id="webmail-bt" href="/home/index" data-hasqtip="6" oldtitle="Poczta" title="" aria-describedby="qtip-6">
+							<i class="fa fa-user fa-2x"></i>
+							{# {{ current_user.name }} {{ current_user.surname }} - {{ current_user.access }} #}
+						</a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			{# {% endblock  %} #}
+
+			{# {% block header2 %} #}
+				<div
+					class="header-2">
+
+					{# {% if raportsa is empty %} #}
+					<div class="col-lg-6" id="domain-switch" style="visibility: hidden;"></div>
+					{# {% else %}
+					
+									<div class="col-lg-6" id="domain-switch">
+										<div>
+											<span class="domain">Domena:
+											</span>
+											<form id="form-domain">
+												<fieldset class="form-group">
+													<select class="form-control" id="domain-select">
+														<option>WYBIERZ DOMENĘ</option>
+														{% for raport in raportsa %}
+														<option>{{ raport.name_domain }}</option>
+														{% endfor %}
+													</select>
+												</fieldset>
+											</form>
+										</div>
+									</div>
+									{% endif %} #}
+
+					<div class="col-lg-6" id="header-user">
+						<div class="pull-lg-right">
+							<span class="owner">Właściciel konta</span>
+							<span class="login">Login:
+								{# <strong>{{ current_user.email }}</strong> #}
+							</span>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div id="container">
+
+					{# {% block container %}{% endblock %} #}
+				</div>
+			</div>
+
+			<footer class="wide front-page">
+				<div class="footer-bar">
+					<div class="col-lg-3 footer-box color1 col-1400-6">
+						<div class="logoa"></div>
+						<p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
+					</div>
+					<div class="col-lg-3 footer-box color2 col-1400-hide">
+						<p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
+					</div>
+					<div class="icons">
+						<div class="icon icon1a"></div>
+						<div class="icon icon2a"></div>
+						<div class="icon icon3a"></div>
+						<div class="icon icon4a"></div>
+						<div class="icon icon5a"></div>
+						<div class="icon icon6a"></div>
+						<div class="icon icon7a"></div>
+						<div class="icon icon8a"></div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
 
 
-
-<div id="front-page">
-    <div class="header-1">
-        <div class="left col-xl-6"><span class="title">AM1.PL</span> <span class="subtitle">(ALP MANAGEMENT SYSTEM)</span></div>
-        <div class="right col-xl-6" id="title-buttons-bar"><div id="title-buttons" class="pull-xl-right pull-xs-left">
-    <a class="title-button active qtip-on btn-anim" id="panel-bt" href="http://am1.pl/" title="Alp Management System" target="_blank"><i class="fa fa-tasks"></i> <span class="hidden-md-down">AM1</span></a>
-    <a class="title-button qtip-on btn-anim" id="cms-bt" href="http://av1.pl" title="Alp Visual System" target="_blank"><i class="fa fa-pencil-square-o"></i> <span class="hidden-md-down">AV1</span></a>
-    
-    <a class="title-button qtip-on btn-anim" id="stats-bt" href="https://panel.am1.pl/CMD_AWSTATS/testowa-domena-krystiana.pl/awstats.pl" title="STATYSTYKI" target="_blank"><i class="fa fa-bar-chart"></i> <span class="hidden-md-down">STATYSTYKI</span></a>
-    
-    <a class="title-button qtip-on btn-anim" id="webmail-bt" href="https://poczta.am1.pl" title="Poczta" target="_blank"><i class="fa fa-envelope"></i> <span class="hidden-md-down">Poczta</span></a>
-</div></div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="header-2">
-        <div class="col-lg-6" id="domain-switch">
-            <div>
-                <span class="domain">Domena: </span>
-                <form id="form-domain">
-                    <fieldset class="form-group">
-                        <select class="form-control" id="domain-select">
-                            <option selected>testowa-domena-krystiana.pl</option>
-                        </select>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-        <div class="col-lg-6" id="header-user">
-            <div class="pull-lg-right">
-                <span class="owner">Właściciel konta</span>
-                <span class="login">Login: <strong>klewandowski</strong></span>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-        <div id="container">
-    
-        <script src="/JS_EASYPIECHART"></script>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="widget" id="pie-chart">
-                    <div class="tlo"></div>
-                    <div class="tekstura"></div>
-                    <div class="blank blank-top"></div>
-<!--                    <div class="widget-title"><i class="fa fa-pie-chart"></i><h5>Statystyki</h5></div>-->
-                    <div class="widget-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-12 kolko">
-                                <div class="title">Wykorzystanie dysku</div>
-                                <div class="blank"></div>
-                                <div class="chart-box">
-                                    <span class="chart" id="chart-userquota" data-percent="" data-userquota="1.79" data-userquotamax="20480">
-                                        <span class="percent"></span>
-                                    </span>
-                                    <div class="caption"><span></span><span id="user-quota">1.79</span> z 20480 MB</span></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-12 kolko">
-                                <div class="md-blank"></div>
-                                <div class="title">Transfer</div>
-                                <div class="blank"></div>
-                                <div class="chart-box">
-                                    <span class="chart" id="chart-bandwith" data-percent="" data-userband="0.0013" data-userbandmax="40.000">
-                                        <span class="percent"></span>
-                                    </span>
-                                    <div class="caption"><span><span id="user-bandwidth">0.0013</span> z <span id="user-bandwidthmax">40.000</span> GB</span></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-12 kolko">
-                                <div class="md-blank lg-blank"></div>
-                                <div class="title">Konta pocztowe</div>
-                                <div class="blank"></div>
-                                <div class="chart-box">
-                                    <span class="chart" id="chart-usermail" data-percent="" data-usermail="1" data-usermailmax="20">
-                                        <span class="percent"></span>
-                                    </span>
-                                    <div class="caption"><span>1 z 20</span></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-12 kolko">
-                                <div class="md-blank lg-blank"></div>
-                                <div class="title">Domeny</div>
-                                <div class="blank"></div>
-                                <div class="chart-box">
-                                    <span class="chart" id="chart-userpointers" data-percent="" data-userpointers="1" data-userpointersmax="10">
-                                        <span class="percent"></span>
-                                    </span>
-                                    <div class="caption"><span>1 z 10</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blank blank-bottom"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-        $(function() {
-            $('footer').addClass('front-page');
-            var domains = getDomains();
-            var currentDomain = 'testowa-domena-krystiana.pl';
-            domains.forEach(function(item) {
-                if (currentDomain!=item) {
-                    $('#form-domain #domain-select').append($('<option>', { 
-                        value: item,
-                        text : item
-                    }));
-                }
-            });
-
-            $(function(){
-                $('#form-domain #domain-select').change(function() {
-                    location.href='/HTM_INDEX_USER?domain='+$(this).val();
-                });
-            });
-            
-            //Pretty numbers
-            $('#user-quota').text(Number($('#user-quota').text()).toFixed(0));
-            $('#user-bandwidth').text(Number($('#user-bandwidth').text()).toFixed(2));
-            $('#user-bandwidthmax').text(Number($('#user-bandwidthmax').text()).toFixed(2));
-            
-            
-            $('.chart#chart-userquota').attr('data-percent', parseFloat($('.chart#chart-userquota').data('userquota')) / parseFloat($('.chart#chart-userquota').data('userquotamax')) * 100);
-            $('.chart#chart-bandwith').attr('data-percent', parseFloat($('.chart#chart-bandwith').data('userband')) / parseFloat($('.chart#chart-bandwith').data('userbandmax')) * 100);
-            $('.chart#chart-usermail').attr('data-percent', parseFloat($('.chart#chart-usermail').data('usermail')) / parseFloat($('.chart#chart-usermail').data('usermailmax')) * 100);
-            $('.chart#chart-userpointers').attr('data-percent', parseFloat($('.chart#chart-userpointers').data('userpointers')) / parseFloat($('.chart#chart-userpointers').data('userpointersmax')) * 100);
-
-            $('.chart#chart-userquota').easyPieChart({
-                easing: 'easeOutElastic',
-                delay: 3000,
-                barColor: '#C17905',
-                trackColor: '#F59B07',
-                scaleColor: false,
-                lineWidth: 15,
-                trackWidth: 15,
-                lineCap: 'butt',
-                size: 110,
-                onStep: function(from, to, percent) {
-                    this.el.children[0].innerHTML = Math.round(percent);
-                }
-            });
-            $('.chart#chart-bandwith').easyPieChart({
-                easing: 'easeOutElastic',
-                delay: 3000,
-                barColor: '#839108',
-                trackColor: '#ACBF0B',
-                scaleColor: false,
-                lineWidth: 15,
-                trackWidth: 15,
-                lineCap: 'butt',
-                size: 110,
-                onStep: function(from, to, percent) {
-                    this.el.children[0].innerHTML = Math.round(percent);
-                }
-            });
-            $('.chart#chart-usermail').easyPieChart({
-                easing: 'easeOutElastic',
-                delay: 3000,
-                barColor: '#C17905',
-                trackColor: '#F59B07',
-                scaleColor: false,
-                lineWidth: 15,
-                trackWidth: 15,
-                lineCap: 'butt',
-                size: 110,
-                onStep: function(from, to, percent) {
-                    this.el.children[0].innerHTML = Math.round(percent);
-                }
-            });
-            $('.chart#chart-userpointers').easyPieChart({
-                easing: 'easeOutElastic',
-                delay: 3000,
-                barColor: '#839108',
-                trackColor: '#ACBF0B',
-                scaleColor: false,
-                lineWidth: 15,
-                trackWidth: 15,
-                lineCap: 'butt',
-                size: 110,
-                onStep: function(from, to, percent) {
-                    this.el.children[0].innerHTML = Math.round(percent);
-                }
-            });
-
-            //parse last message
-            var lastMessage = getLastMessage();
-            if(lastMessage instanceof jQuery){
-                lastMessage.attr('href', lastMessage.attr('href') + '&domain=testowa-domena-krystiana.pl');
-            }
-            $('#last-message').html(lastMessage);
-
-            //parse general stats info
-            $('#visits').html(general.TotalVisits);
-            $('#uvisits').html(general.TotalUnique);
-            var year = general.LastUpdate.substr(0,4);
-            var month = general.LastUpdate.substr(4,2);
-            var day = general.LastUpdate.substr(6,2);
-            var hour = general.LastUpdate.substr(8,2);
-            var min = general.LastUpdate.substr(10,2);
-            var sec = general.LastUpdate.substr(12,2);
-            $('#update').html(year+'-'+month+'-'+day+' '+hour+':'+min+':'+sec);
-            $('#hosts').html(general.MonthHostsKnown);
-            $('#uhosts').html(general.MonthHostsUnknown);
-
-            
-        });
-        </script>
-        <div class="row row-1400 md-zero">
-            <div class="col-xl-6 col-lg-12 hidden-md-down col-1400-12" id="wykres">
-                <div class="widget" id="stat-chart">
-                    <div class="widget-title arrow arrow-down"><i class="fa fa-area-chart"></i><h5>Liczba odwiedzin</h5></div>
-                    <div class="widget-body">
-                        
-<script src="/JS_CHART"></script>
-<div>
-    <canvas id="canvas" height="120"></canvas>
-</div>
-<script>
-        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        var randomScalingFactor = function() {
-            return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
-        };
-        var randomColorFactor = function() {
-            return Math.round(Math.random() * 255);
-        };
-        var randomColor = function() {
-            return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',.7)';
-        };
-        
-        window.onload = function() {
-            
-            
-            var barChartData = {
-                labels: days_label,
-                datasets: [
-                    {
-                        label: 'Średnia',
-                        type: 'line',
-                        fill: false,
-                        backgroundColor: "#1B3544",
-                        borderColor: "#1B3544",
-                        data: days_avg
-                    },
-                    {
-                        label: 'Wizyty',
-                        backgroundColor: '#585858',
-                        data: days_visits
-                    },
-                    {
-                        label: 'Strony',
-                        backgroundColor: '#F59B07',
-                        data: days_pages,
-                    },
-                    {
-                        label: 'Wywołania',
-                        backgroundColor: '#ACBF0B',
-                        data: days_hits
-                    },
-                    
-                ]
-            };
-            
-            var ctx = document.getElementById("canvas").getContext("2d");
-            window.myBar = new Chart(ctx, {
-                type: 'bar',
-                data: barChartData,
-                options: {
-                    // Elements options apply to all of the options unless overridden in a dataset
-                    // In this case, we are setting the border of each bar to be 2px wide and green
-                    elements: {
-                        rectangle: {
-//                            borderWidth: 1,
-//                            borderColor: '#999',
-//                            borderSkipped: 'bottom'
-                        }
-                    },
-                    responsive: true,
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                    },
-                    title: {
-                        display: false,
-                        text: 'Statystyki odwiedzin'
-                    }
-                }
-            });
-            
-        };
-        
-    </script>
-
-
-
-<script>var days_visits = [];
-var days_pages = [];
-var days_hits = [];
-var days_label = [];
-var days_avg = [];
-var time = [];
-var time_label = [];
-var general = [];
-</script>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-1400-clear"></div>
-
-            <div class="col-xl-6 col-lg-12 md-zero padding-left-zero col-1400-12">
-                <div class="row md-zero">
-                    <div class="col-xl-6 col-lg-6 col-md-12  md-zero padding-right-zero">
-                        <div id="imieniny" class="arrow arrow-right arrow-md-down">
-<p class='data'>23<br>grudzień</p><p class='rok'>2020</p><p class='dzienroku'>358 dzień roku</p><p class='imieniny'>imieniny: Sławomir, Wiktor</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-left-zero">
-                        <div id="komunikat">
-                            <div id="last-message"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12  md-zero padding-right-zero">
-                        <div id="statystyki" class="arrow arrow-right arrow-md-down">
-                            <p class='ikona'><i class="fa fa-area-chart"></i></p>
-                            <p class='title'>STATYSTYKI</p>
-                            <p class='subtitle'>(OBECNY MIESIĄC)</p>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-left-zero">
-                        <div id="statystyki-lista">
-                            <ul id="general-stats">
-                                <li><i class="fa fa-user"></i> Liczba odwiedzin: <strong id="visits"></strong></li>
-                                <li><i class="fa fa-star"></i> Unikalnych odwiedzin: <strong id="uvisits"></strong></li>
-                                <li><i class="fa fa-user-plus"></i> Rozpoznani użytkownicy: <strong id="hosts"></strong></li>
-                                <li><i class="fa fa-user-secret "></i> Użytkownicy nieznani: <strong id="uhosts"></strong></li>
-                                <li><i class="fa fa-refresh"></i> Ostatnia aktualizacja: <strong id="update"></strong></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="hidden-lg-up col-md-12 md-zero" id="pomoc-wrap">
-                <div id="pomoc" class="arrow arrow-left arrow-md-down">
-                    <p><a href="http://pomoc.am1.pl" target="_blank">POMOC.AM1.PL</a></p>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-right-zero" id="pomoc-text-wrap">
-                <div id="pomoc-text">
-                    <p>Wkrótce zostanie udostępniony nowy panel pomocy technicznej</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-12 col-1400-6 hidden-md-down" id="pomoc-wrap">
-                <div id="pomoc" class="arrow arrow-left">
-                    <p><a href="http://pomoc.am1.pl" target="_blank">POMOC.AM1.PL</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="clear"></div>
-</div>
-
-        
-    </div>
-    <!--- endo of #container -->    
-            
-            <footer class="wide">
-                <div class="footer-bar">
-                    <div class="col-lg-3 footer-box color1 col-1400-6">
-                        <div class="logo"></div>
-                        <p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
-                    </div>
-                    <div class="col-lg-3 footer-box color2 col-1400-hide">
-                        <p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
-                    </div>
-                    <div class="icons">
-                        <div class="icon icon1"></div>
-                        <div class="icon icon2"></div>
-                        <div class="icon icon3"></div>
-                        <div class="icon icon4"></div>
-                        <div class="icon icon5"></div>
-                        <div class="icon icon6"></div>
-                        <div class="icon icon7"></div>
-                        <div class="icon icon8"></div>
-                    </div>
-                </div>
-
-            </footer>
-        </div>
-        <!--- endo of container-fluid -->
-{% endblock %}
+	{% endblock %}
