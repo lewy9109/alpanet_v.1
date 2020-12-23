@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block javascripts %}
-
+<script src="https://kit.fontawesome.com/5402199d6e.js" crossorigin="anonymous"></script>
         <script src="{{ asset('js_login/vendor.js') }}"></script>
 		<script src="{{ asset('js_login/plugins.js') }}"></script>
 		<script src="{{ asset('js_login/main.js') }}"></script>
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-	{{parent()}}
+	{# {{parent()}} #}
         <link href="{{ asset('css/base_login_panel.css') }}" rel="stylesheet"> 
 {% endblock %}
 
