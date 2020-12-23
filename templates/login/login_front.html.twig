@@ -1,0 +1,152 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+
+        <script src="{{ asset('js_login/vendor.js') }}"></script>
+		<script src="{{ asset('js_login/plugins.js') }}"></script>
+		<script src="{{ asset('js_login/main.js') }}"></script>
+		<script src="{{ asset('js_login/initparticles.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+	{{parent()}}
+        <link href="{{ asset('css/base_login_panel.css') }}" rel="stylesheet"> 
+{% endblock %}
+
+{% block body %}
+
+<script>
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			
+			function fadeOut(el){
+				el.style.opacity = 1;
+				(function fade() {
+					if ((el.style.opacity -= .1) < 0.2) {
+						el.style.display = "none";
+					} else {
+						requestAnimationFrame(fade);
+					}
+				})();
+			}
+			
+			function preloaderHide() {
+				var preloader = document.getElementById('preloader');
+				setTimeout(function(){
+					//preloader.style.display = 'none';
+					fadeOut(preloader);
+					zoomFx();
+				},getRandomInt(500, 1500));
+			}
+			
+			function zoomFx() {
+				var content = document.getElementById('tlo');
+				content.className += "zoom";
+			}
+			
+		</script>
+<div id="landsacpe-hint">
+			<div class="tekstura"></div>
+			<div id="logo"></div>
+			<div id="pict"></div>
+			<p>Obróć swoje urządzenie do pozycji pionowej</p>
+		</div>
+		<header>
+			<div class="container">
+				<a href="{{ path('login_front') }}" id="logo">
+					<div id="ikona"></div>
+					<h1>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</h1>
+				</a>
+				<div class="poczta-wrap">
+					<a href="https://poczta.am1.pl/" target="_blank" id="poczta2"><div class="ikona"></div>
+					</a>
+					<a href="https://poczta.am1.pl/" target="_blank" id="poczta">
+						<div class="ikona"></div>
+						<p class="lg">poczta.am1.pl</p>
+						<p class="md">POCZTA</p>
+					</a>
+					<a href="https://panel.am1.pl/" target="_blank" id="poczta0">PANEL.AM1.PL</a>
+					
+					
+				</div>
+			</div>
+		</header>
+		<div id="arrow"></div>
+		<div id="content">
+			<div id="tlo"></div>
+			<div id="tekstura"></div>
+			<div id="preloader">
+				<div class="css_preloader"></div>
+			</div>
+			<div id="home"></div>
+				<div id="zaufanie">
+					<div id="tekst">Z PAŃSTWEM OD 2000 ROKU<br>DZIĘKUJEMY ZA ZAUFANIE</div>
+					<div id="lata">20 <span>LAT</span></div>
+				</div>
+				<div id="login-box">
+					
+					<form action="https://panel.am1.pl/CMD_LOGIN" method="POST" name="form" id="login-form">
+						<input type=hidden name=referer value="/">
+							<div class="inputs">
+								<div class="group">      
+								<input type=text name=username id="user" required>
+									 <span class="highlight"></span>
+									  <span class="bar"></span>
+									  <label>Nazwa użytkownika</label>
+								</div>
+								<div class="group" id="group-password">      
+									<input type=password name=password id="password" required >
+									  <span class="highlight"></span>
+									  <span class="bar"></span>
+									  <label>Hasło</label>
+								</div>
+							</div>
+							
+						<input type=submit value='ZALOGUJ SIĘ' id="zaloguj-bt" class="form-input">
+					</form>
+					
+						<a id="lost-password" href="{{ path('forget_password') }}">Nie pamiętam hasła?</a>
+					
+				</div>
+				
+				<div class="ikonki">
+					<div class="row row1 row-md">
+						<div class="ikonka dysk"></div>
+						<div class="ikonka ssl"></div>
+						<div class="ikonka giodo"></div>
+					</div>
+					<div class="row row2">
+						<div class="md-hide">
+							<div class="ikonka dysk"></div>
+							<div class="ikonka ssl"></div>
+							<div class="ikonka giodo"></div>
+						</div>
+						<div class="ikonka sla"></div>
+						<div class="ikonka tier3"></div>
+						<div class="ikonka gdansk"></div>
+						<div class="ikonka backup"></div>
+						<div class="ikonka wsparcie"></div>
+					</div>
+				</div>
+		</div>
+		
+		<footer>
+			<div id="footer-bar">
+				<div class="footer-box color1">
+					<div class="logo"></div>
+					<p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
+				</div>
+				<div class="footer-box color2">
+					<p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
+				</div>
+				<div class="info">
+					LOGOWANIE JEST ZABEZPIECZONE CERTYFIKATEM. TO GWARANCJA, ŻE DANE SĄ SZYFROWANE I BEZPIECZNE.
+				</div>
+			</div>
+			<div id="footer-text">
+				<p id="hint">Proszę pamiętać, że dla systemu ma znaczenie, czy zostały wpisane małe, czy też wielkie litery (sprawdź, czy nie masz włączonej funkcji Caps Lock na klawiaturze). Każda nieautoryzowana próba zalogowania jest rejestrowana przez system.</p>
+				<p class="ver"><i id="logo-icon"></i>ALP MANAGEMENT SYSTEM version 1.16</p>
+			</div>
+		</footer>
+{% endblock %}
