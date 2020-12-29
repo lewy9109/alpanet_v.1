@@ -7,7 +7,9 @@
  * SIDEBAR TOGGLE
  */
 
-$(function() {
+
+$(function(){
+    
     $('#sidebar-switcher').click(function() {
         toggleSideBar();
     });

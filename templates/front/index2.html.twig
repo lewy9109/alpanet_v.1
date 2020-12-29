@@ -1,0 +1,347 @@
+{% extends 'front/base.html.twig' %}
+{% block container %}
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget" id="pie-chart">
+                            <div class="tlo zoom"></div>
+                            <div class="tekstura"></div>
+                            <div class="blank blank-top"></div>
+                            <!--                    <div class="widget-title"><i class="fa fa-pie-chart"></i><h5>Statystyki</h5></div>-->
+                            <div class="widget-body">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-6 col-md-12 kolko">
+                                        <div class="title">Wykorzystanie dysku</div>
+                                        <div class="blank"></div>
+                                        <div class="chart-box">
+                                            <span class="chart" id="chart-userquota" data-percent="0.008740234375"
+                                                data-userquota="1.79" data-userquotamax="20480">
+                                                <span class="percent">0</span>
+                                                <canvas height="110" width="110"></canvas></span>
+                                            <div class="caption"><span></span><span id="user-quota">2</span> z 20480 MB
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-md-12 kolko">
+                                        <div class="md-blank"></div>
+                                        <div class="title">Transfer</div>
+                                        <div class="blank"></div>
+                                        <div class="chart-box">
+                                            <span class="chart" id="chart-bandwith" data-percent="0.00325"
+                                                data-userband="0.0013" data-userbandmax="40.000">
+                                                <span class="percent">0</span>
+                                                <canvas height="110" width="110"></canvas></span>
+                                            <div class="caption"><span><span id="user-bandwidth">0.00</span> z <span
+                                                        id="user-bandwidthmax">40.00</span> GB</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-md-12 kolko">
+                                        <div class="md-blank lg-blank"></div>
+                                        <div class="title">Konta pocztowe</div>
+                                        <div class="blank"></div>
+                                        <div class="chart-box">
+                                            <span class="chart" id="chart-usermail" data-percent="5" data-usermail="1"
+                                                data-usermailmax="20">
+                                                <span class="percent">5</span>
+                                                <canvas height="110" width="110"></canvas></span>
+                                            <div class="caption"><span>1 z 20</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-md-12 kolko">
+                                        <div class="md-blank lg-blank"></div>
+                                        <div class="title">Domeny</div>
+                                        <div class="blank"></div>
+                                        <div class="chart-box">
+                                            <span class="chart" id="chart-userpointers" data-percent="10"
+                                                data-userpointers="1" data-userpointersmax="10">
+                                                <span class="percent">10</span>
+                                                <canvas height="110" width="110"></canvas></span>
+                                            <div class="caption"><span>1 z 10</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blank blank-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $(function () {
+                        $('footer').addClass('front-page');
+                        var domains = getDomains();
+                        var currentDomain = 'testowa-domena-krystiana.pl';
+                        domains.forEach(function (item) {
+                            if (currentDomain != item) {
+                                $('#form-domain #domain-select').append($('<option>', {
+                                    value: item,
+                                    text: item
+                                }));
+                            }
+                        });
+
+                        $(function () {
+                            $('#form-domain #domain-select').change(function () {
+                                location.href = '/HTM_INDEX_USER?domain=' + $(this).val();
+                            });
+                        });
+
+                        //Pretty numbers
+                        $('#user-quota').text(Number($('#user-quota').text()).toFixed(0));
+                        $('#user-bandwidth').text(Number($('#user-bandwidth').text()).toFixed(2));
+                        $('#user-bandwidthmax').text(Number($('#user-bandwidthmax').text()).toFixed(2));
+
+
+                        $('.chart#chart-userquota').attr('data-percent', parseFloat($('.chart#chart-userquota').data('userquota')) / parseFloat($('.chart#chart-userquota').data('userquotamax')) * 100);
+                        $('.chart#chart-bandwith').attr('data-percent', parseFloat($('.chart#chart-bandwith').data('userband')) / parseFloat($('.chart#chart-bandwith').data('userbandmax')) * 100);
+                        $('.chart#chart-usermail').attr('data-percent', parseFloat($('.chart#chart-usermail').data('usermail')) / parseFloat($('.chart#chart-usermail').data('usermailmax')) * 100);
+                        $('.chart#chart-userpointers').attr('data-percent', parseFloat($('.chart#chart-userpointers').data('userpointers')) / parseFloat($('.chart#chart-userpointers').data('userpointersmax')) * 100);
+
+                        $('.chart#chart-userquota').easyPieChart({
+                            easing: 'easeOutElastic',
+                            delay: 3000,
+                            barColor: '#C17905',
+                            trackColor: '#F59B07',
+                            scaleColor: false,
+                            lineWidth: 15,
+                            trackWidth: 15,
+                            lineCap: 'butt',
+                            size: 110,
+                            onStep: function (from, to, percent) {
+                                this.el.children[0].innerHTML = Math.round(percent);
+                            }
+                        });
+                        $('.chart#chart-bandwith').easyPieChart({
+                            easing: 'easeOutElastic',
+                            delay: 3000,
+                            barColor: '#839108',
+                            trackColor: '#ACBF0B',
+                            scaleColor: false,
+                            lineWidth: 15,
+                            trackWidth: 15,
+                            lineCap: 'butt',
+                            size: 110,
+                            onStep: function (from, to, percent) {
+                                this.el.children[0].innerHTML = Math.round(percent);
+                            }
+                        });
+                        $('.chart#chart-usermail').easyPieChart({
+                            easing: 'easeOutElastic',
+                            delay: 3000,
+                            barColor: '#C17905',
+                            trackColor: '#F59B07',
+                            scaleColor: false,
+                            lineWidth: 15,
+                            trackWidth: 15,
+                            lineCap: 'butt',
+                            size: 110,
+                            onStep: function (from, to, percent) {
+                                this.el.children[0].innerHTML = Math.round(percent);
+                            }
+                        });
+                        $('.chart#chart-userpointers').easyPieChart({
+                            easing: 'easeOutElastic',
+                            delay: 3000,
+                            barColor: '#839108',
+                            trackColor: '#ACBF0B',
+                            scaleColor: false,
+                            lineWidth: 15,
+                            trackWidth: 15,
+                            lineCap: 'butt',
+                            size: 110,
+                            onStep: function (from, to, percent) {
+                                this.el.children[0].innerHTML = Math.round(percent);
+                            }
+                        });
+
+                        //parse last message
+                        var lastMessage = getLastMessage();
+                        if (lastMessage instanceof jQuery) {
+                            lastMessage.attr('href', lastMessage.attr('href') + '&domain=testowa-domena-krystiana.pl');
+                        }
+                        $('#last-message').html(lastMessage);
+
+                        //parse general stats info
+                        $('#visits').html(general.TotalVisits);
+                        $('#uvisits').html(general.TotalUnique);
+                        var year = general.LastUpdate.substr(0, 4);
+                        var month = general.LastUpdate.substr(4, 2);
+                        var day = general.LastUpdate.substr(6, 2);
+                        var hour = general.LastUpdate.substr(8, 2);
+                        var min = general.LastUpdate.substr(10, 2);
+                        var sec = general.LastUpdate.substr(12, 2);
+                        $('#update').html(year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec);
+                        $('#hosts').html(general.MonthHostsKnown);
+                        $('#uhosts').html(general.MonthHostsUnknown);
+
+
+                    });
+                </script>
+                <div class="row row-1400 md-zero">
+                    <div class="col-xl-6 col-lg-12 hidden-md-down col-1400-12" id="wykres">
+                        <div class="widget" id="stat-chart">
+                            <div class="widget-title arrow arrow-down"><i class="fa fa-area-chart"></i>
+                                <h5>Liczba odwiedzin</h5>
+                            </div>
+                            <div class="widget-body">
+
+                                <script
+                                    src="AM1%20-%20ALP%20MANAGEMENT%20SYSTEM%20-%20127.0.0.1_pliki/JS_CHART"></script>
+                                <div><iframe class="chartjs-hidden-iframe"
+                                        style="width: 100%; display: block; border: 0px none; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                                    <canvas id="canvas" height="296" style="width: 742px; height: 296px;"
+                                        width="742"></canvas>
+                                </div>
+                                <script>
+                                    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                                    var randomScalingFactor = function () {
+                                        return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+                                    };
+                                    var randomColorFactor = function () {
+                                        return Math.round(Math.random() * 255);
+                                    };
+                                    var randomColor = function () {
+                                        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',.7)';
+                                    };
+
+                                    window.onload = function () {
+
+
+                                        var barChartData = {
+                                            labels: days_label,
+                                            datasets: [
+                                                {
+                                                    label: 'Średnia',
+                                                    type: 'line',
+                                                    fill: false,
+                                                    backgroundColor: "#1B3544",
+                                                    borderColor: "#1B3544",
+                                                    data: days_avg
+                                                },
+                                                {
+                                                    label: 'Wizyty',
+                                                    backgroundColor: '#585858',
+                                                    data: days_visits
+                                                },
+                                                {
+                                                    label: 'Strony',
+                                                    backgroundColor: '#F59B07',
+                                                    data: days_pages,
+                                                },
+                                                {
+                                                    label: 'Wywołania',
+                                                    backgroundColor: '#ACBF0B',
+                                                    data: days_hits
+                                                },
+
+                                            ]
+                                        };
+
+                                        var ctx = document.getElementById("canvas").getContext("2d");
+                                        window.myBar = new Chart(ctx, {
+                                            type: 'bar',
+                                            data: barChartData,
+                                            options: {
+                                                // Elements options apply to all of the options unless overridden in a dataset
+                                                // In this case, we are setting the border of each bar to be 2px wide and green
+                                                elements: {
+                                                    rectangle: {
+                                                        //                            borderWidth: 1,
+                                                        //                            borderColor: '#999',
+                                                        //                            borderSkipped: 'bottom'
+                                                    }
+                                                },
+                                                responsive: true,
+                                                legend: {
+                                                    display: true,
+                                                    position: 'bottom',
+                                                },
+                                                title: {
+                                                    display: false,
+                                                    text: 'Statystyki odwiedzin'
+                                                }
+                                            }
+                                        });
+
+                                    };
+
+                                </script>
+
+
+
+                                <script>var days_visits = [];
+                                    var days_pages = [];
+                                    var days_hits = [];
+                                    var days_label = [];
+                                    var days_avg = [];
+                                    var time = [];
+                                    var time_label = [];
+                                    var general = [];
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1400-clear"></div>
+
+                    <div class="col-xl-6 col-lg-12 md-zero padding-left-zero col-1400-12">
+                        <div class="row md-zero">
+                            <div class="col-xl-6 col-lg-6 col-md-12  md-zero padding-right-zero">
+                                <div id="imieniny" class="arrow arrow-right arrow-md-down">
+                                    <p class="data">23<br>grudzień</p>
+                                    <p class="rok">2020</p>
+                                    <p class="dzienroku">358 dzień roku</p>
+                                    <p class="imieniny">imieniny: Sławomir, Wiktor</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-left-zero">
+                                <div id="komunikat">
+                                    <div id="last-message">Brak komunikatów</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12  md-zero padding-right-zero">
+                                <div id="statystyki" class="arrow arrow-right arrow-md-down">
+                                    <p class="ikona"><i class="fa fa-area-chart"></i></p>
+                                    <p class="title">STATYSTYKI</p>
+                                    <p class="subtitle">(OBECNY MIESIĄC)</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-left-zero">
+                                <div id="statystyki-lista">
+                                    <ul id="general-stats">
+                                        <li><i class="fa fa-user"></i> Liczba odwiedzin: <strong id="visits"></strong>
+                                        </li>
+                                        <li><i class="fa fa-star"></i> Unikalnych odwiedzin: <strong
+                                                id="uvisits"></strong></li>
+                                        <li><i class="fa fa-user-plus"></i> Rozpoznani użytkownicy: <strong
+                                                id="hosts"></strong></li>
+                                        <li><i class="fa fa-user-secret "></i> Użytkownicy nieznani: <strong
+                                                id="uhosts"></strong></li>
+                                        <li><i class="fa fa-refresh"></i> Ostatnia aktualizacja: <strong
+                                                id="update"></strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="hidden-lg-up col-md-12 md-zero" id="pomoc-wrap">
+                        <div id="pomoc" class="arrow arrow-left arrow-md-down">
+                            <p><a href="http://pomoc.am1.pl/" target="_blank">POMOC.AM1.PL</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 md-zero padding-right-zero" id="pomoc-text-wrap">
+                        <div id="pomoc-text">
+                            <p>Wkrótce zostanie udostępniony nowy panel pomocy technicznej</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-1400-6 hidden-md-down" id="pomoc-wrap">
+                        <div id="pomoc" class="arrow arrow-left">
+                            <p><a href="http://pomoc.am1.pl/" target="_blank">POMOC.AM1.PL</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+        {% endblock %}

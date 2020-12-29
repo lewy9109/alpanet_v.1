@@ -206,7 +206,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: .9rem !important;
   line-height: 1.5;
   color: #373a3c;
   background-color: #fff; }
@@ -296,7 +296,7 @@ caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #818a91;
-  text-align: left;
+  text-align: center;
   caption-side: bottom; }
 
 th {
@@ -367,12 +367,12 @@ output {
     .container {
       max-width: 1140px; } }
 
-.container-fluid {
+.container-fluid-Alp {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container-fluid::after {
+  .container-fluid-Alp::after {
     content: "";
     display: table;
     clear: both; }
@@ -1235,7 +1235,7 @@ output {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: .8rem !important;
   line-height: 1.5;
   color: #55595c;
   background-color: #fff;
@@ -2693,1908 +2693,1908 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 .fa-glass:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-music:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-search:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-envelope-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-heart:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-star:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-star-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-user:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-film:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-th-large:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-th:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-th-list:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-check:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-remove:before,
 .fa-close:before,
 .fa-times:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-search-plus:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-search-minus:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-power-off:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-signal:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gear:before,
 .fa-cog:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-trash-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-home:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-clock-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-road:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-download:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrow-circle-o-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrow-circle-o-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-inbox:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-play-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-rotate-right:before,
 .fa-repeat:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-refresh:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-list-alt:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-lock:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-flag:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-headphones:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-volume-off:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-volume-down:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-volume-up:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-qrcode:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-barcode:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-tag:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-tags:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-book:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-bookmark:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-print:before {
-  content: "ďŻ"; }
+  content: ""; }
 
 .fa-camera:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-font:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-bold:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-italic:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-text-height:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-text-width:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-align-left:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-align-center:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-align-right:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-align-justify:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-list:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-dedent:before,
 .fa-outdent:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-indent:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-video-camera:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-photo:before,
 .fa-image:before,
 .fa-picture-o:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-pencil:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-map-marker:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-adjust:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-tint:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-edit:before,
 .fa-pencil-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-share-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-check-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrows:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-step-backward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-fast-backward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-backward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-play:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pause:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-stop:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-forward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-fast-forward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-step-forward:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-eject:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-chevron-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-chevron-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-plus-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-minus-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-times-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-check-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-question-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-info-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-crosshairs:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-times-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-check-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ban:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrow-left:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-arrow-right:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-arrow-up:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-arrow-down:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-mail-forward:before,
 .fa-share:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-expand:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-compress:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-plus:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-minus:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-asterisk:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-exclamation-circle:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-gift:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-leaf:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-fire:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-eye:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-eye-slash:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-warning:before,
 .fa-exclamation-triangle:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-plane:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-calendar:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-random:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-comment:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-magnet:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-chevron-up:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-chevron-down:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-retweet:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-shopping-cart:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-folder:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-folder-open:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-arrows-v:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-arrows-h:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-bar-chart-o:before,
 .fa-bar-chart:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-twitter-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-facebook-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-camera-retro:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-key:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gears:before,
 .fa-cogs:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-comments:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-thumbs-o-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-thumbs-o-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-star-half:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-heart-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sign-out:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-linkedin-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-thumb-tack:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-external-link:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sign-in:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-trophy:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-github-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-upload:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-lemon-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-phone:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bookmark-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-phone-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-twitter:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-facebook-f:before,
 .fa-facebook:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-github:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-unlock:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-credit-card:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-feed:before,
 .fa-rss:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hdd-o:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-bullhorn:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-bell:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-certificate:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-hand-o-right:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-hand-o-left:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-hand-o-up:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-hand-o-down:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-arrow-circle-left:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-arrow-circle-right:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-arrow-circle-up:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-arrow-circle-down:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-globe:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-wrench:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-tasks:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-filter:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-briefcase:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-arrows-alt:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-group:before,
 .fa-users:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-chain:before,
 .fa-link:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cloud:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-flask:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cut:before,
 .fa-scissors:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-copy:before,
 .fa-files-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-paperclip:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-save:before,
 .fa-floppy-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-list-ul:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-list-ol:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-strikethrough:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-underline:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-table:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-magic:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-truck:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pinterest:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pinterest-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-google-plus-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-google-plus:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-money:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-caret-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-caret-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-caret-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-caret-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-columns:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-unsorted:before,
 .fa-sort:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sort-down:before,
 .fa-sort-desc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sort-up:before,
 .fa-sort-asc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-envelope:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-linkedin:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-rotate-left:before,
 .fa-undo:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-legal:before,
 .fa-gavel:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-dashboard:before,
 .fa-tachometer:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-comment-o:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-comments-o:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-flash:before,
 .fa-bolt:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-sitemap:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-umbrella:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-paste:before,
 .fa-clipboard:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-lightbulb-o:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-exchange:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-cloud-download:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-cloud-upload:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-user-md:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-stethoscope:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-suitcase:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-bell-o:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-coffee:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-cutlery:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-file-text-o:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-building-o:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-hospital-o:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-ambulance:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-medkit:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-fighter-jet:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-beer:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-h-square:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-plus-square:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-angle-double-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-double-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-double-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-double-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angle-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-desktop:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-laptop:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-tablet:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-mobile-phone:before,
 .fa-mobile:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-quote-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-quote-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-spinner:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-mail-reply:before,
 .fa-reply:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-github-alt:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-folder-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-folder-open-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-smile-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-frown-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-meh-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gamepad:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-keyboard-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-flag-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-flag-checkered:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-terminal:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-code:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-mail-reply-all:before,
 .fa-reply-all:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-star-half-empty:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-location-arrow:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-crop:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-code-fork:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-unlink:before,
 .fa-chain-broken:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-question:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-info:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-exclamation:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-superscript:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-subscript:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-eraser:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-puzzle-piece:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-microphone:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-microphone-slash:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-shield:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-calendar-o:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-fire-extinguisher:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-rocket:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-maxcdn:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-chevron-circle-left:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-chevron-circle-right:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-chevron-circle-up:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-chevron-circle-down:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-html5:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-css3:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-anchor:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-unlock-alt:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-bullseye:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ellipsis-h:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ellipsis-v:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-rss-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-play-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ticket:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-minus-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-minus-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-level-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-level-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-check-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pencil-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-external-link-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-share-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-compass:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-down:before,
 .fa-caret-square-o-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-up:before,
 .fa-caret-square-o-up:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-right:before,
 .fa-caret-square-o-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-euro:before,
 .fa-eur:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gbp:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-dollar:before,
 .fa-usd:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-rupee:before,
 .fa-inr:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cny:before,
 .fa-rmb:before,
 .fa-yen:before,
 .fa-jpy:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-won:before,
 .fa-krw:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bitcoin:before,
 .fa-btc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-text:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sort-alpha-asc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sort-alpha-desc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sort-amount-asc:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-sort-amount-desc:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-sort-numeric-asc:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-sort-numeric-desc:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-thumbs-up:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-thumbs-down:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-youtube-square:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-youtube:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-xing:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-xing-square:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-youtube-play:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-dropbox:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-stack-overflow:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-instagram:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-flickr:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-adn:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-bitbucket:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-bitbucket-square:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-tumblr:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-tumblr-square:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-long-arrow-down:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-long-arrow-up:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-long-arrow-left:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-long-arrow-right:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-apple:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-windows:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-android:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-linux:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-dribbble:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-skype:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-foursquare:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-trello:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-female:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-male:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gittip:before,
 .fa-gratipay:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sun-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-moon-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-archive:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bug:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-vk:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-weibo:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-renren:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pagelines:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-stack-exchange:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrow-circle-o-right:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-arrow-circle-o-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-left:before,
 .fa-caret-square-o-left:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-dot-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-wheelchair:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-vimeo-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-turkish-lira:before,
 .fa-try:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-plus-square-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-space-shuttle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-slack:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-envelope-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-wordpress:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-openid:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-institution:before,
 .fa-bank:before,
 .fa-university:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-mortar-board:before,
 .fa-graduation-cap:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-yahoo:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-google:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-reddit:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-reddit-square:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-stumbleupon-circle:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-stumbleupon:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-delicious:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-digg:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-pied-piper:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-pied-piper-alt:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-drupal:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-joomla:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-language:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-fax:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-building:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-child:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-paw:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-spoon:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-cube:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-cubes:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-behance:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-behance-square:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-steam:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-steam-square:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-recycle:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-automobile:before,
 .fa-car:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-cab:before,
 .fa-taxi:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-tree:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-spotify:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-deviantart:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-soundcloud:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-database:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-pdf-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-word-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-excel-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-powerpoint-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-photo-o:before,
 .fa-file-picture-o:before,
 .fa-file-image-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-zip-o:before,
 .fa-file-archive-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-sound-o:before,
 .fa-file-audio-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-movie-o:before,
 .fa-file-video-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-file-code-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-vine:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-codepen:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-jsfiddle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-life-bouy:before,
 .fa-life-buoy:before,
 .fa-life-saver:before,
 .fa-support:before,
 .fa-life-ring:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-circle-o-notch:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ra:before,
 .fa-rebel:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ge:before,
 .fa-empire:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-git-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-git:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-y-combinator-square:before,
 .fa-yc-square:before,
 .fa-hacker-news:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-tencent-weibo:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-qq:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-wechat:before,
 .fa-weixin:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-send:before,
 .fa-paper-plane:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-send-o:before,
 .fa-paper-plane-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-history:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-circle-thin:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-header:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-paragraph:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sliders:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-share-alt:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-share-alt-square:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-bomb:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-soccer-ball-o:before,
 .fa-futbol-o:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-tty:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-binoculars:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-plug:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-slideshare:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-twitch:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-yelp:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-newspaper-o:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-wifi:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-calculator:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-paypal:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-google-wallet:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-cc-visa:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-cc-mastercard:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-cc-discover:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-cc-amex:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-cc-paypal:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-cc-stripe:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-bell-slash:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-bell-slash-o:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-trash:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-copyright:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-at:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-eyedropper:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-paint-brush:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-birthday-cake:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-area-chart:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-pie-chart:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-line-chart:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-lastfm:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-lastfm-square:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-off:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-toggle-on:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bicycle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bus:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ioxhost:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-angellist:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cc:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-shekel:before,
 .fa-sheqel:before,
 .fa-ils:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-meanpath:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-buysellads:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-connectdevelop:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-dashcube:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-forumbee:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-leanpub:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sellsy:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-shirtsinbulk:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-simplybuilt:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-skyatlas:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cart-plus:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cart-arrow-down:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-diamond:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-ship:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-user-secret:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-motorcycle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-street-view:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-heartbeat:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-venus:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-mars:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-mercury:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-intersex:before,
 .fa-transgender:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-transgender-alt:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-venus-double:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-mars-double:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-venus-mars:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-mars-stroke:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-mars-stroke-v:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-mars-stroke-h:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-neuter:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-genderless:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-facebook-official:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-pinterest-p:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-whatsapp:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-server:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-user-plus:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-user-times:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-hotel:before,
 .fa-bed:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-viacoin:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-train:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-subway:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-medium:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-yc:before,
 .fa-y-combinator:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-optin-monster:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-opencart:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-expeditedssl:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-battery-4:before,
 .fa-battery-full:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-battery-3:before,
 .fa-battery-three-quarters:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-battery-2:before,
 .fa-battery-half:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-battery-1:before,
 .fa-battery-quarter:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-battery-0:before,
 .fa-battery-empty:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-mouse-pointer:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-i-cursor:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-object-group:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-object-ungroup:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sticky-note:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-sticky-note-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cc-jcb:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-cc-diners-club:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-clone:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-balance-scale:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hourglass-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hourglass-1:before,
 .fa-hourglass-start:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hourglass-2:before,
 .fa-hourglass-half:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hourglass-3:before,
 .fa-hourglass-end:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hourglass:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-grab-o:before,
 .fa-hand-rock-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-stop-o:before,
 .fa-hand-paper-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-scissors-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-lizard-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-spock-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-pointer-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hand-peace-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-trademark:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-registered:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-creative-commons:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-gg:before {
-  content: "ď "; }
+  content: ""; }
 
 .fa-gg-circle:before {
-  content: "ďĄ"; }
+  content: ""; }
 
 .fa-tripadvisor:before {
-  content: "ď˘"; }
+  content: ""; }
 
 .fa-odnoklassniki:before {
-  content: "ďŁ"; }
+  content: ""; }
 
 .fa-odnoklassniki-square:before {
-  content: "ď¤"; }
+  content: ""; }
 
 .fa-get-pocket:before {
-  content: "ďĽ"; }
+  content: ""; }
 
 .fa-wikipedia-w:before {
-  content: "ďŚ"; }
+  content: ""; }
 
 .fa-safari:before {
-  content: "ď§"; }
+  content: ""; }
 
 .fa-chrome:before {
-  content: "ď¨"; }
+  content: ""; }
 
 .fa-firefox:before {
-  content: "ďŠ"; }
+  content: ""; }
 
 .fa-opera:before {
-  content: "ďŞ"; }
+  content: ""; }
 
 .fa-internet-explorer:before {
-  content: "ďŤ"; }
+  content: ""; }
 
 .fa-tv:before,
 .fa-television:before {
-  content: "ďŹ"; }
+  content: ""; }
 
 .fa-contao:before {
-  content: "ď­"; }
+  content: ""; }
 
 .fa-500px:before {
-  content: "ďŽ"; }
+  content: ""; }
 
 .fa-amazon:before {
-  content: "ď°"; }
+  content: ""; }
 
 .fa-calendar-plus-o:before {
-  content: "ďą"; }
+  content: ""; }
 
 .fa-calendar-minus-o:before {
-  content: "ď˛"; }
+  content: ""; }
 
 .fa-calendar-times-o:before {
-  content: "ďł"; }
+  content: ""; }
 
 .fa-calendar-check-o:before {
-  content: "ď´"; }
+  content: ""; }
 
 .fa-industry:before {
-  content: "ďľ"; }
+  content: ""; }
 
 .fa-map-pin:before {
-  content: "ďś"; }
+  content: ""; }
 
 .fa-map-signs:before {
-  content: "ďˇ"; }
+  content: ""; }
 
 .fa-map-o:before {
-  content: "ď¸"; }
+  content: ""; }
 
 .fa-map:before {
-  content: "ďš"; }
+  content: ""; }
 
 .fa-commenting:before {
-  content: "ďş"; }
+  content: ""; }
 
 .fa-commenting-o:before {
-  content: "ďť"; }
+  content: ""; }
 
 .fa-houzz:before {
-  content: "ďź"; }
+  content: ""; }
 
 .fa-vimeo:before {
-  content: "ď˝"; }
+  content: ""; }
 
 .fa-black-tie:before {
-  content: "ďž"; }
+  content: ""; }
 
 .fa-fonticons:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-reddit-alien:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-edge:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-credit-card-alt:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-codiepie:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-modx:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-fort-awesome:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-usb:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-product-hunt:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-mixcloud:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-scribd:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pause-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-pause-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-stop-circle:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-stop-circle-o:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-shopping-bag:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-shopping-basket:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-hashtag:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bluetooth:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-bluetooth-b:before {
-  content: "ď"; }
+  content: ""; }
 
 .fa-percent:before {
-  content: "ď"; }
+  content: ""; }
 
 /*
  * Variables
@@ -4610,7 +4610,8 @@ a.bg-danger:focus, a.bg-danger:hover {
  */
 html,
 body {
-  min-height: 100%; }
+  min-height: 100%; 
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;}
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -4624,18 +4625,35 @@ body {
   color: #222; }
 
 a {
-  color: #F59B07; }
+  color: #25b7d3; }
   a:hover {
     color: #c37c06; }
 
-h1 {
+h2 {
+  
+  position: relative;
   color: #6C6C6C;
   font-weight: normal;
   border-bottom: solid 1px #cdd1d3;
   box-shadow: 0px 1px 0px 0px #fff;
   -webkit-box-shadow: 0px 1px 0px 0px #fff;
   margin-bottom: 8px;
-  font-size: 1.4rem; }
+  font-size: 1.4rem; 
+}
+h1 {
+  
+  position: relative;
+  color: #6C6C6C;
+  font-weight: normal;
+  border-bottom: solid 1px #cdd1d3;
+  box-shadow: 0px 1px 0px 0px #fff;
+  -webkit-box-shadow: 0px 1px 0px 0px #fff;
+  margin-bottom: 8px;
+  font-size: 1.4rem; 
+}
+.btn-primary2{
+  background-color: #dee69d !important;
+}
 
 h2 {
   font-size: 1.3rem;
@@ -4664,19 +4682,19 @@ h2 {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #ACBF0B;
-  border-color: #ACBF0B; }
+  background-color: #acbf0b;
+  border-color: #acbf0b; }
   .btn.btn-primary:hover {
     background-color: #96a70a; }
 .btn.btn-info {
   color: #fff;
-  background-color: #F39B06;
-  border-color: #F39B06; }
+  background-color: #25b7d3;
+  border-color: #25b7d3; }
   .btn.btn-info:hover {
-    background-color: #da8b05; }
+    background-color: #25b7d3; }
 
 .text-warning {
-  color: #F59B07 !important; }
+  color: #25b7d3 !important; }
 
 #landsacpe-hint {
   display: none; }
@@ -4688,7 +4706,7 @@ h2 {
   position: relative;
   margin-left: 90px;
   min-height: calc(100vh - 41px); }
-  #main-content.container-fluid {
+  #main-content.container-fluid-Alp {
     margin: 0;
     padding: 0;
     margin-left: 90px; }
@@ -4729,15 +4747,16 @@ h2 {
           top: 5px;
           position: relative; }
         #main-content .header-1 #title-buttons .title-button.active {
-          background-color: #F59B07;
+          background-color: #25b7d3;
           text-decoration: none; }
   #main-content .header-2 {
-    background: #ACBF0B;
+    background: #acbf0b;
     color: #eaeaea;
     padding: 10px 0;
     padding-left: 30px;
     padding-right: 30px;
     min-height: 45px;
+    max-height: 45px;
     display: flex;
     align-items: center; }
 
@@ -4765,7 +4784,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F59B07;
+    background-color: #25b7d3;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -4805,7 +4824,7 @@ h2 {
       padding-left: .5rem;
       /*          color: $breadcrumb-divider-color;*/
       color: #eaeaea;
-      content: ">Â "; }
+      content: "> "; }
     .breadcrumb > li > a {
       /*            color: $breadcrumb-color;*/
       color: #eaeaea; }
@@ -4981,10 +5000,10 @@ h2 {
       position: relative;
       margin-right: 5px; }
     #main-header .header-button:hover {
-      background-color: #ACBF0B;
+      background-color: #acbf0b;
       text-decoration: none; }
     #main-header .header-button:before {
-      background-color: #ACBF0B; }
+      background-color: #acbf0b; }
   #main-header #sidebar-switcher {
     background: transparent url("/IMG_MENU_SWITCHER") no-repeat center center;
     float: left;
@@ -5071,7 +5090,7 @@ h2 {
         border-radius: 3px; }
     #main-sidebar #user-box #user-menu {
       display: none;
-      background: #F59B07;
+      background: #25b7d3;
       position: absolute;
       right: 0;
       top: 0;
@@ -5137,7 +5156,7 @@ h2 {
       border-bottom: 1px solid #0E1116;
       border-top: 1px solid #36393E; }
       #main-sidebar #main-buttons > li > a:hover, #main-sidebar #main-buttons > li > a.active, #main-sidebar #main-buttons > li > a.active-tmp {
-        background: #ACBF0B;
+        background: #acbf0b;
         color: #fff; }
       #main-sidebar #main-buttons > li > a.active-tmp {
         background: #39383E;
@@ -5161,9 +5180,11 @@ h2 {
     /*        height: calc(100% - 207px);*/
     height: 100%;
     background: #39383E;
-    border-top: 8px solid #F59B07; }
-    #main-sidebar #submenu div.submenu-wrap {
-      display: none; }
+    border-top: 8px solid #25b7d3; }
+    #main-sidebar #submenu div.submenu-wrap 
+    {
+      display: none; 
+    }
       #main-sidebar #submenu div.submenu-wrap.active {
         display: block; }
       #main-sidebar #submenu div.submenu-wrap .submenu-title {
@@ -5188,13 +5209,13 @@ h2 {
           background: linear-gradient(to bottom, #44444e 0%, #44444e 26%, #39383e 90%, #39383e 100%);
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44444e', endColorstr='#39383e',GradientType=0 ); }
           #main-sidebar #submenu div.submenu-wrap > ul > li > a:before {
-            background: #ACBF0B; }
+            background: #acbf0b; }
           #main-sidebar #submenu div.submenu-wrap > ul > li > a.active {
-            background: #ACBF0B;
+            background: #acbf0b;
             color: #eaeaea;
             text-decoration: none; }
           #main-sidebar #submenu div.submenu-wrap > ul > li > a.active {
-            background: #F59B07; }
+            background: #25b7d3; }
           #main-sidebar #submenu div.submenu-wrap > ul > li > a > i {
             margin-right: 5px; }
 
@@ -5271,6 +5292,13 @@ h2 {
  * ----------------------
  */
 footer {
+  color: #eaeaea !important;
+  font-size: .8rem !important;
+  letter-spacing: 1px !important;
+  line-height: 16px !important;
+
+  font-family: 'Roboto' !important;
+  font-weight: 400 !important;
   bottom: 0px;
   width: 100%;
   color: #eaeaea;
@@ -5299,13 +5327,13 @@ footer {
     padding: 25px;
     max-height: 100%; }
     footer .footer-box.color1 {
-      background: #ACBF0B; }
+      background: #acbf0b; }
       footer .footer-box.color1:after {
-        border-color: #ACBF0B; }
+        border-color: #acbf0b; }
     footer .footer-box.color2 {
-      background: #F59B07; }
+      background: #25b7d3; }
       footer .footer-box.color2:after {
-        border-color: #F59B07; }
+        border-color: #25b7d3; }
     footer .footer-box:after {
       content: "";
       position: absolute;
@@ -5324,8 +5352,8 @@ footer {
       -moz-border-left-colors: none !important;
       border-image: none;
       z-index: 999; }
-    footer .footer-box .logo {
-      background: url("/IMG_LOGO_AM1") no-repeat;
+    footer .footer-box .logoa {
+      background: url("../img/logoam1lg.png") no-repeat;
       background-size: 60px;
       background-position: center;
       height: 60px;
@@ -5350,22 +5378,22 @@ footer {
       margin-right: 7px;
       background-position: center;
       background-repeat: no-repeat; }
-      footer .icons .icon.icon1 {
-        background-image: url("/IMG_ICON1"); }
-      footer .icons .icon.icon2 {
-        background-image: url("/IMG_ICON2"); }
-      footer .icons .icon.icon3 {
-        background-image: url("/IMG_ICON3"); }
-      footer .icons .icon.icon4 {
-        background-image: url("/IMG_ICON4"); }
-      footer .icons .icon.icon5 {
-        background-image: url("/IMG_ICON5"); }
-      footer .icons .icon.icon6 {
-        background-image: url("/IMG_ICON6"); }
-      footer .icons .icon.icon7 {
-        background-image: url("/IMG_ICON7"); }
-      footer .icons .icon.icon8 {
-        background-image: url("/IMG_ICON8"); }
+      footer .icons .icon.icon1a {
+        background-image: url("/img/dyskissd.png"); }
+      footer .icons .icon.icon2a {
+        background-image: url("/img/ssl.png"); }
+      footer .icons .icon.icon3a {
+        background-image: url("/img/giodo.png"); }
+      footer .icons .icon.icon4a {
+        background-image: url("/img/sla.png"); }
+      footer .icons .icon.icon5a {
+        background-image: url("/img/tier3.png"); }
+      footer .icons .icon.icon6a {
+        background-image: url("/img/gdansk.png"); }
+      footer .icons .icon.icon7a {
+        background-image: url("/img/backup.png"); }
+      footer .icons .icon.icon8a {
+        background-image: url("/img/wsparcie.png"); }
 
 @media (max-width: 1800px) {
   footer strong {
@@ -5579,7 +5607,8 @@ footer {
     height: 100%;
     width: 100%; }
   #pie-chart .tekstura {
-    background: transparent url("/IMG_TEKSTURA");
+    background: transparent url("/img/tlo.jpg")!important;
+    /* filter: brightness(3); */
     position: absolute;
     height: 100%;
     width: 100%;
@@ -5666,20 +5695,27 @@ footer {
           margin-left: 0.1em;
           font-size: .8em; }
     #pie-chart .chart-box .caption {
-      color: #fff;
+      text-align: center;
+      color: white;
       width: 200px;
       right: 0px;
       position: relative;
       background: #39383E;
       padding: 5px 10px;
-      font-size: 1.3rem; }
+      font-size: 0.8rem; }
 
 #wykres {
   padding-right: 0; }
   #wykres .widget-title {
     margin-bottom: 10px; }
   #wykres .widget-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 350px; }
+    #wykres .widget-body2 {
+   
+      height: 350px; }
 
 #last-message {
   text-align: center;
@@ -5752,7 +5788,7 @@ footer {
       text-decoration: underline; }
 
 #imieniny {
-  background: #F39B06;
+  background: #25b7d3;
   height: 210px;
   display: flex;
   flex-direction: column;
@@ -5763,7 +5799,7 @@ footer {
   line-height: 1rem;
   text-transform: uppercase; }
   #imieniny:after {
-    border-color: #F39B06; }
+    border-color: #25b7d3; }
   #imieniny .data {
     font-size: 3.6rem;
     line-height: 3.5rem;
@@ -5808,7 +5844,7 @@ footer {
       color: #39383E;
       border-bottom: 1px solid #ddd;
       padding: 12px 8px;
-      font-size: .945rem; }
+      font-size: .8rem; }
       #statystyki-lista #general-stats > li:nth-last-child(1) {
         border-bottom: none; }
       #statystyki-lista #general-stats > li > i {
@@ -5820,7 +5856,7 @@ footer {
 
 #pomoc {
   margin-top: -70px;
-  background: #ACBF0B;
+  background: #acbf0b;
   height: 71px;
   display: flex;
   flex-direction: column;
@@ -5832,7 +5868,7 @@ footer {
   text-transform: uppercase;
   position: relative; }
   #pomoc:after {
-    border-color: #ACBF0B;
+    border-color: #acbf0b;
     left: -28px;
     margin-top: -16px; }
   #pomoc p {
@@ -5983,18 +6019,18 @@ footer {
 
   .arrow-md-down:after {
     border-color: transparent !important;
-    border-top-color: #F39B06 !important;
+    border-top-color: #25b7d3 !important;
     bottom: -28px;
     left: calc(50% - 14px);
     top: auto !important; }
 
   #imieniny.arrow-md-down:after {
-    border-top-color: #F39B06 !important; }
+    border-top-color: #25b7d3 !important; }
 
   #statystyki {
-    background-color: #F39B06; }
+    background-color: #25b7d3; }
     #statystyki:after {
-      border-top-color: #F39B06 !important; }
+      border-top-color: #25b7d3 !important; }
 
   #pomoc {
     margin-left: 0;
@@ -6002,7 +6038,7 @@ footer {
     #pomoc:after {
       left: calc(50% - 14px) !important;
       top: auto !important;
-      border-top-color: #ACBF0B !important; }
+      border-top-color: #acbf0b !important; }
 
   #pomoc-text {
     margin-bottom: 20px;
@@ -6044,7 +6080,7 @@ small {
 table.table {
   margin-top: 15px; }
 table#backup > thead {
-  background: #ACBF0B; }
+  background: #acbf0b; }
 table > thead {
   background: #39383E;
   color: #eaeaea; }
@@ -6054,10 +6090,10 @@ table th, table td {
   vertical-align: middle !important; }
 table .table-group-title {
   text-align: center;
-  background: #F39B06;
+  background: #25b7d3;
   color: #fff; }
 table .table-row-sumary {
-  background: #ACBF0B;
+  background: #acbf0b;
   color: #fff !important; }
 
 @media (max-width: 1024px) {
@@ -6372,6 +6408,237 @@ table .table-row-sumary {
     height: 1.6rem !important;
     right: -26%; }
   .ui-progressbar .ui-widget-header {
-    background: #F59B07 !important; }
+    background: #25b7d3 !important; }
 
-/*# sourceMappingURL=main.css.map */
+
+.fm-m
+{
+  margin-right: 10px;
+}
+.svg-inline--fa.fmt{
+  margin-top: 10px;
+}
+.orangeA{
+  background-color: #25b7d3 !important;
+}
+
+div.progress-bar-success
+{
+  background-color: #eddd50;
+}
+
+.circle1 {
+  
+  text-align: center;
+  padding: 5px;
+  width:100%;
+  color: white;
+  border-radius: 5px;
+  background-color: #ed5550;
+  }
+  .circle2{
+    text-align: center;
+    padding: 5px;
+    width:100%;
+    color: white;
+    border-radius: 5px;
+    background-color: #acbf0b;
+ 
+  }
+  .circle3 {
+    text-align: center;
+    padding: 5px;
+    width:100%;
+    color: white;
+    border-radius: 5px;
+    background-color: #eddd50;
+  
+  }
+  .progress-bar{
+    font-weight: 800;
+
+  }
+  .precentInfo{
+    margin-left: 15px;
+    font-size: auto;
+    font-weight: 500;
+  }
+  
+  .progress-bar-success{
+    min-height: 30px;
+  }
+  .imgA{
+    display: flex;
+    align-items: center;
+  }
+  .imgAvatar{
+    padding: 0 10px;
+    width: 100px;
+    height: auto;
+    object-fit: cover !important;
+  }
+  .thpointer{
+    cursor: pointer;
+  }
+.rowInfo1
+{
+  display: flex;
+  background-color: white;
+  padding: 5px;
+}
+.rowInfo2
+{
+ display: flex;
+  padding: 5px;
+}
+.rowInfoTopic{
+  width: 30%;
+}
+.marg-rt{
+  margin-right: 20px;
+}
+.cr-1{
+  color: #000;
+  background-color: #fafafa;
+}
+.cr-1:hover{
+  color: #acbf0b;
+  background-color: #fafafa;
+}
+
+.nameDom
+{
+  font-size: 6.6rem;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 700;
+  color: #25b7d3;
+}
+.nonborder{
+  border: none;
+}
+.td-detalis{
+  max-width: 38px;
+}
+table{
+  font-size: 0.7rem;
+}
+.btn{
+  font-size: 0.7rem !important;
+}
+
+.chld-flex
+{
+  max-width: 25%;
+  flex: 1 0 21%; /* explanation below */
+  padding: 10px;
+  height: 100px;
+  height: auto;
+
+}
+ /* Style the Image Used to Trigger the Modal */
+ #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal-IMG {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 15px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white !important; 
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.disp-menu{
+  display: block !important;
+}
+.upperh1{
+ 
+  text-transform: uppercase;
+}
+/* #statystyki:hover{
+  background-color: #22252a;
+} */
+
+#statystyki:hover{
+  color: #acbf0b;
+  background-color: #22252a;
+}
+.a-b{
+  color: black !important;
+}
+
+option{
+  letter-spacing: normal;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 500;
+}

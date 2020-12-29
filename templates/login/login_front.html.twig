@@ -86,11 +86,11 @@
 				</div>
 				<div id="login-box">
 					
-					<form action="https://panel.am1.pl/CMD_LOGIN" method="POST" name="form" id="login-form">
+					<form action="{{path('sing_in')}}" method="POST" name="form" id="login-form">
 						<input type=hidden name=referer value="/">
 							<div class="inputs">
 								<div class="group">      
-								<input type=text name=username id="user" required>
+								<input type=text name=email id="user" required>
 									 <span class="highlight"></span>
 									  <span class="bar"></span>
 									  <label>Nazwa użytkownika</label>
