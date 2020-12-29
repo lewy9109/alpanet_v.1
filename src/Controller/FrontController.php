@@ -6,11 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
+/**
+ * @Route("/front")
+ */
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/front", name="front_main_page")
+     * @Route("/", name="front_main_page")
      */
     public function index(): Response
     {

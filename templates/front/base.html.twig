@@ -19,195 +19,196 @@
 	<script src="https://kit.fontawesome.com/5402199d6e.js" crossorigin="anonymous"></script>
 
 	{# <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
-	<link href="{{ asset('js/js_main.js') }}"> #}
+		<script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+		<link href="{{ asset('js/js_main.js') }}"> #}
 {% endblock %}
 
 {% block body %}
 
 <div id="landsacpe-hint">
-		<div id="logo"></div>
-		<div id="pict"></div>
-		<p>Obróć swoje urządzenie do pozycji pionowej</p>
+	<div id="logo"></div>
+	<div id="pict"></div>
+	<p>Obróć swoje urządzenie do pozycji pionowej</p>
+</div>
+
+<header id="main-header">
+	<a class="wide" id="logo" href="#">
+		<div id="logo-icon"></div>
+		<div id="logo-cms">testowa-domena-krystiana.pl email uzytkownika</div>
+	</a>
+	{# let href=# #}
+	<a class="header-button btn-anim" id="sidebar-switcher" href="#"></a>
+
+	<a class="header-button qtip-on btn-anim" id="user-logout" href="#" data-hasqtip="0" oldtitle="Wyloguj" title="" aria-describedby="qtip-0">
+		<i class="fa fa-sign-out"></i>
+		<span class="hidden-xs-down">Wyloguj</span>
+	</a>
+	<a class="header-button buttons-sm-up qtip-on btn-anim" id="password-bt" href="#" data-hasqtip="1" oldtitle="Zmiana hasła" title="" aria-describedby="qtip-1">
+		<i class="fa fa-unlock-alt"></i>
+		Hasło</a>
+	<a
+		class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="#" data-hasqtip="2" oldtitle="klewandowski" title="">
+
+		<!--        <img src="/IMG_AVATAR"> -->
+		<i class="fa fa-user"></i>
+		klewandowski
+	</a>
+
+</header>
+<nav id="main-sidebar" class="wide sm-hidden">
+	<div id="user-box">
+		<a id="user-avatar" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl"><img src="AM1%20-%20ALP%20MANAGEMENT%20SYSTEM%20-%20127.0.0.1_pliki/IMG_AVATAR.png"></a>
+		<div id="user-menu">
+			<p class="welcome">DZIEŃ DOBRY</p>
+			<p class="welcome-desc">Witamy w systemie do zarządzania kontem testowa-domena-krystiana.pl</p>
+			<!--            <p class="user-last-login">Ostatnie logowanie: 21.02.2016 10:23</p>-->
+			<!--            <a class="user-logout" href="/CMD_LOGOUT"><i class="fa fa-sign-out"></i> Wyloguj</a>-->
+			<a class="user-messages" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl&amp;sort1=-1">
+
+				<i class="fa fa-envelope"></i>
+			</a>
+		</div>
 	</div>
 
-	<header id="main-header">
-		<a class="wide" id="logo" href="#">
-			<div id="logo-icon"></div>
-			<div id="logo-cms">testowa-domena-krystiana.pl email uzytkownika</div>
-		</a>
-		<a class="header-button btn-anim" id="sidebar-switcher" href="#"></a>
-		<a class="header-button qtip-on btn-anim" id="user-logout" href="https://panel.am1.pl/CMD_LOGOUT" data-hasqtip="0" oldtitle="Wyloguj" title="" aria-describedby="qtip-0">
-			<i class="fa fa-sign-out"></i>
-			<span class="hidden-xs-down">Wyloguj</span>
-		</a>
-		<a class="header-button buttons-sm-up qtip-on btn-anim" id="password-bt" href="https://panel.am1.pl/HTM_PASSWD?domain=testowa-domena-krystiana.pl" data-hasqtip="1" oldtitle="Zmiana hasła" title="" aria-describedby="qtip-1">
-			<i class="fa fa-unlock-alt"></i>
-			Hasło</a>
-		<a
-			class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl&amp;sort1=-1" data-hasqtip="2" oldtitle="klewandowski" title="">
+	<ul id="main-buttons">
+		<li>
+			<a class="main-button active" data-submenu="dashboard" id="bt-dashboard" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-home"></i>
+				<span>MOJE KONTO</span>
+			</a>
+		</li>
+		<li>
+			<a class="main-button" data-submenu="email" id="bt-email" href="https://panel.am1.pl/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-envelope"></i>
+				<span>KONTA E-MAIL</span>
+			</a>
+		</li>
+		<li>
+			<a class="main-button" data-submenu="domains" id="bt-domains" href="https://panel.am1.pl/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-globe fa-lg"></i>
+				<span>DOMENY</span>
+			</a>
+		</li>
 
-			<!--        <img src="/IMG_AVATAR"> -->
-			<i class="fa fa-user"></i>
-			klewandowski
-		</a>
+		<li>
+			<a class="main-button" data-submenu="ftp" id="bt-ftp" href="https://panel.am1.pl/CMD_FTP?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-files-o"></i>
+				<span>KONTA FTP</span>
+			</a>
+		</li>
 
-	</header>
-	<nav id="main-sidebar" class="wide sm-hidden">
-		<div id="user-box">
-			<a id="user-avatar" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl"><img src="AM1%20-%20ALP%20MANAGEMENT%20SYSTEM%20-%20127.0.0.1_pliki/IMG_AVATAR.png"></a>
-			<div id="user-menu">
-				<p class="welcome">DZIEŃ DOBRY</p>
-				<p class="welcome-desc">Witamy w systemie do zarządzania kontem testowa-domena-krystiana.pl</p>
-				<!--            <p class="user-last-login">Ostatnie logowanie: 21.02.2016 10:23</p>-->
-				<!--            <a class="user-logout" href="/CMD_LOGOUT"><i class="fa fa-sign-out"></i> Wyloguj</a>-->
-				<a class="user-messages" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl&amp;sort1=-1">
 
-					<i class="fa fa-envelope"></i>
-				</a>
-			</div>
+		<li>
+			<a class="main-button" data-submenu="db" id="bt-db" href="https://panel.am1.pl/CMD_DB?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-database"></i>
+				<span>BAZY DANYCH</span>
+			</a>
+		</li>
+
+		<li>
+			<a class="main-button" data-submenu="stats" id="bt-stats" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl">
+				<i class="fa fa-bar-chart"></i>
+				<span>STATYSTYKI</span>
+			</a>
+		</li>
+		<li>
+			<a class="main-button" data-submenu="backup" id="bt-backup" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup">
+				<i class="fa fa-clone"></i>
+				<span>BACKUP</span>
+			</a>
+		</li>
+	</ul>
+	<div id="submenu">
+		<div id="submenu-dashboard" class="submenu-wrap active">
+			<div class="submenu-title">MOJE KONTO</div>
+			<ul>
+				<li>
+					<a class="btn-anim" id="password" href="https://panel.am1.pl/HTM_PASSWD?domain=testowa-domena-krystiana.pl">
+						<i class="fa fa-key"></i>
+						Zmiana hasła</a>
+				</li>
+				<!--                <li><a id="login-history" href="/CMD_LOGIN_HISTORY?domain=testowa-domena-krystiana.pl&section=dashboard"><i class="fa fa-history"></i> Historia logowań</a></li>-->
+				<li>
+					<a class="btn-anim" id="support-center" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl">
+						<i class="fa fa-medkit"></i>
+						Pomoc techniczna</a>
+				</li>
+			</ul>
+		</div>
+		<div id="submenu-email" class="submenu-wrap">
+			<div class="submenu-title">KONTA E-MAIL</div>
+			<ul>
+
+				<li><a class="btn-anim" id="pop-email-accounts" href="https://panel.am1.pl/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl"><i class="fa fa-users"></i>Konta pocztowe</a></li>
+
+				<li><a class="btn-anim" id="pop-create" href="https://panel.am1.pl/HTM_EMAIL_POP_CREATE?DOMAIN=testowa-domena-krystiana.pl&amp;DEFAULT_POP_QUOTA=none&amp;USER_CAN_SET_SEND_LIMIT=none&amp;GLOBAL_PER_EMAIL_LIMIT=none"><i class="fa fa-plus"></i>Dodaj konto e-mail</a></li>
+
+				<li><a class="btn-anim" id="forwarders" href="https://panel.am1.pl/CMD_EMAIL_FORWARDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i>Przekierowania (aliasy)</a></li>
+
+
+				<li><a class="btn-anim" id="autoresponders" href="https://panel.am1.pl/CMD_EMAIL_AUTORESPONDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-exchange"></i>Autorespondery</a></li>
+
+
+				<li><a class="btn-anim" id="vac-messages" href="https://panel.am1.pl/CMD_EMAIL_VACATION?domain=testowa-domena-krystiana.pl"><i class="fa fa-sun-o"></i>Wiadomości urlopowe</a></li>
+
+
+				<li><a class="btn-anim" id="spam-filters" href="https://panel.am1.pl/CMD_SPAMASSASSIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-filter"></i>Filtry poczty</a></li>
+
+
+			</ul>
 		</div>
 
-		<ul id="main-buttons">
-			<li>
-				<a class="main-button active" data-submenu="dashboard" id="bt-dashboard" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-home"></i>
-					<span>MOJE KONTO</span>
-				</a>
-			</li>
-			<li>
-				<a class="main-button" data-submenu="email" id="bt-email" href="https://panel.am1.pl/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-envelope"></i>
-					<span>KONTA E-MAIL</span>
-				</a>
-			</li>
-			<li>
-				<a class="main-button" data-submenu="domains" id="bt-domains" href="https://panel.am1.pl/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-globe fa-lg"></i>
-					<span>DOMENY</span>
-				</a>
-			</li>
-
-			<li>
-				<a class="main-button" data-submenu="ftp" id="bt-ftp" href="https://panel.am1.pl/CMD_FTP?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-files-o"></i>
-					<span>KONTA FTP</span>
-				</a>
-			</li>
-
-
-			<li>
-				<a class="main-button" data-submenu="db" id="bt-db" href="https://panel.am1.pl/CMD_DB?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-database"></i>
-					<span>BAZY DANYCH</span>
-				</a>
-			</li>
-
-			<li>
-				<a class="main-button" data-submenu="stats" id="bt-stats" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl">
-					<i class="fa fa-bar-chart"></i>
-					<span>STATYSTYKI</span>
-				</a>
-			</li>
-			<li>
-				<a class="main-button" data-submenu="backup" id="bt-backup" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup">
-					<i class="fa fa-clone"></i>
-					<span>BACKUP</span>
-				</a>
-			</li>
-		</ul>
-		<div id="submenu">
-			<div id="submenu-dashboard" class="submenu-wrap active">
-				<div class="submenu-title">MOJE KONTO</div>
-				<ul>
-					<li>
-						<a class="btn-anim" id="password" href="https://panel.am1.pl/HTM_PASSWD?domain=testowa-domena-krystiana.pl">
-							<i class="fa fa-key"></i>
-							Zmiana hasła</a>
-					</li>
-					<!--                <li><a id="login-history" href="/CMD_LOGIN_HISTORY?domain=testowa-domena-krystiana.pl&section=dashboard"><i class="fa fa-history"></i> Historia logowań</a></li>-->
-					<li>
-						<a class="btn-anim" id="support-center" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl">
-							<i class="fa fa-medkit"></i>
-							Pomoc techniczna</a>
-					</li>
-				</ul>
-			</div>
-			<div id="submenu-email" class="submenu-wrap">
-				<div class="submenu-title">KONTA E-MAIL</div>
-				<ul>
-
-					<li><a class="btn-anim" id="pop-email-accounts" href="https://panel.am1.pl/CMD_EMAIL_POP?domain=testowa-domena-krystiana.pl"><i class="fa fa-users"></i>Konta pocztowe</a></li>
-
-					<li><a class="btn-anim" id="pop-create" href="https://panel.am1.pl/HTM_EMAIL_POP_CREATE?DOMAIN=testowa-domena-krystiana.pl&amp;DEFAULT_POP_QUOTA=none&amp;USER_CAN_SET_SEND_LIMIT=none&amp;GLOBAL_PER_EMAIL_LIMIT=none"><i class="fa fa-plus"></i>Dodaj konto e-mail</a></li>
-
-					<li><a class="btn-anim" id="forwarders" href="https://panel.am1.pl/CMD_EMAIL_FORWARDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i>Przekierowania (aliasy)</a></li>
-
-
-					<li><a class="btn-anim" id="autoresponders" href="https://panel.am1.pl/CMD_EMAIL_AUTORESPONDER?domain=testowa-domena-krystiana.pl"><i class="fa fa-exchange"></i>Autorespondery</a></li>
-
-
-					<li><a class="btn-anim" id="vac-messages" href="https://panel.am1.pl/CMD_EMAIL_VACATION?domain=testowa-domena-krystiana.pl"><i class="fa fa-sun-o"></i>Wiadomości urlopowe</a></li>
-
-
-					<li><a class="btn-anim" id="spam-filters" href="https://panel.am1.pl/CMD_SPAMASSASSIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-filter"></i>Filtry poczty</a></li>
-
-
-				</ul>
-			</div>
-
-			<div id="submenu-ftp" class="submenu-wrap">
-				<div class="submenu-title">KONTA FTP</div>
-				<ul>
-					<li><a class="btn-anim" id="ftp-managment" href="https://panel.am1.pl/CMD_FTP?domain=testowa-domena-krystiana.pl"><i class="fa fa-folder"></i>Zarządzanie kontami</a></li>
-					<li><a class="btn-anim" id="create-ftp" href="https://panel.am1.pl/HTM_FTP_CREATE?DOMAIN=testowa-domena-krystiana.pl&amp;owned=|OWNEDIP|"><i class="fa fa-plus"></i>Dodaj konto FTP</a></li>
-				</ul>
-			</div>
-
-
-			<div id="submenu-db" class="submenu-wrap">
-				<div class="submenu-title">BAZY DANYCH</div>
-				<ul>
-					<li><a class="btn-anim" id="db-managment" href="https://panel.am1.pl/CMD_DB?domain=testowa-domena-krystiana.pl"><i class="fa fa-database"></i>Zarządzanie bazami</a></li>
-					<li><a class="btn-anim" id="create-db" href="https://panel.am1.pl/CMD_DB_CREATE?DOMAIN=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i>Dodaj bazę danych</a></li>
-				</ul>
-			</div>
-
-
-			<div id="submenu-domains" class="submenu-wrap">
-				<div class="submenu-title">DOMENY</div>
-				<ul>
-					<li><a class="btn-anim" id="domain-setup" href="https://panel.am1.pl/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl"><i class="fa fa-globe"></i>Konfiguracja domen</a></li>
-					<li><a class="btn-anim" id="add-domain" href="https://panel.am1.pl/HTM_ADD_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i>Dodaj domenę</a></li>
-					<li><a class="btn-anim" id="chenge-domain" href="https://panel.am1.pl/CMD_CHANGE_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-pencil-square-o"></i>Zmień nazwę domeny</a></li>
-					<li><a class="btn-anim" id="subdomain-managment" href="https://panel.am1.pl/CMD_SUBDOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-tasks"></i>Subdomeny</a></li>
-					<li><a class="btn-anim" id="domain-pointers" href="https://panel.am1.pl/CMD_DOMAIN_POINTER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i>Przekierowania</a></li>
-					<li><a class="btn-anim" id="domain-ssl" href="https://panel.am1.pl/CMD_SSL?domain=testowa-domena-krystiana.pl"><i class="fa fa-certificate"></i>Certyfikaty SSL</a></li>
-				</ul>
-			</div>
-
-			<div id="submenu-stats" class="submenu-wrap">
-				<div class="submenu-title">STATYSTYKI</div>
-				<ul>
-					<li><a class="btn-anim" id="site-sum-stats-log" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl"><i class="fa fa-pie-chart"></i>Statystyki serwisu</a></li>
-					<li><a class="btn-anim" id="email-usage" href="https://panel.am1.pl/CMD_EMAIL_USAGE?domain=testowa-domena-krystiana.pl"><i class="fa fa-area-chart"></i>Statystyki poczty</a></li>
-				</ul>
-			</div>
-
-			<div id="submenu-backup" class="submenu-wrap">
-				<div class="submenu-title">BACKUP</div>
-				<ul>
-					<li><a class="btn-anim" id="create-backups" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup"><i class="fa fa-repeat"></i>Utwórz backup</a></li>
-				</ul>
-			</div>
-
-
+		<div id="submenu-ftp" class="submenu-wrap">
+			<div class="submenu-title">KONTA FTP</div>
+			<ul>
+				<li><a class="btn-anim" id="ftp-managment" href="https://panel.am1.pl/CMD_FTP?domain=testowa-domena-krystiana.pl"><i class="fa fa-folder"></i>Zarządzanie kontami</a></li>
+				<li><a class="btn-anim" id="create-ftp" href="https://panel.am1.pl/HTM_FTP_CREATE?DOMAIN=testowa-domena-krystiana.pl&amp;owned=|OWNEDIP|"><i class="fa fa-plus"></i>Dodaj konto FTP</a></li>
+			</ul>
 		</div>
-		<div class="clear"></div>
 
-	</nav>
 
-    
+		<div id="submenu-db" class="submenu-wrap">
+			<div class="submenu-title">BAZY DANYCH</div>
+			<ul>
+				<li><a class="btn-anim" id="db-managment" href="https://panel.am1.pl/CMD_DB?domain=testowa-domena-krystiana.pl"><i class="fa fa-database"></i>Zarządzanie bazami</a></li>
+				<li><a class="btn-anim" id="create-db" href="https://panel.am1.pl/CMD_DB_CREATE?DOMAIN=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i>Dodaj bazę danych</a></li>
+			</ul>
+		</div>
+
+
+		<div id="submenu-domains" class="submenu-wrap">
+			<div class="submenu-title">DOMENY</div>
+			<ul>
+				<li><a class="btn-anim" id="domain-setup" href="https://panel.am1.pl/CMD_ADDITIONAL_DOMAINS?domain=testowa-domena-krystiana.pl"><i class="fa fa-globe"></i>Konfiguracja domen</a></li>
+				<li><a class="btn-anim" id="add-domain" href="https://panel.am1.pl/HTM_ADD_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-plus"></i>Dodaj domenę</a></li>
+				<li><a class="btn-anim" id="chenge-domain" href="https://panel.am1.pl/CMD_CHANGE_DOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-pencil-square-o"></i>Zmień nazwę domeny</a></li>
+				<li><a class="btn-anim" id="subdomain-managment" href="https://panel.am1.pl/CMD_SUBDOMAIN?domain=testowa-domena-krystiana.pl"><i class="fa fa-tasks"></i>Subdomeny</a></li>
+				<li><a class="btn-anim" id="domain-pointers" href="https://panel.am1.pl/CMD_DOMAIN_POINTER?domain=testowa-domena-krystiana.pl"><i class="fa fa-forward"></i>Przekierowania</a></li>
+				<li><a class="btn-anim" id="domain-ssl" href="https://panel.am1.pl/CMD_SSL?domain=testowa-domena-krystiana.pl"><i class="fa fa-certificate"></i>Certyfikaty SSL</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-stats" class="submenu-wrap">
+			<div class="submenu-title">STATYSTYKI</div>
+			<ul>
+				<li><a class="btn-anim" id="site-sum-stats-log" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl"><i class="fa fa-pie-chart"></i>Statystyki serwisu</a></li>
+				<li><a class="btn-anim" id="email-usage" href="https://panel.am1.pl/CMD_EMAIL_USAGE?domain=testowa-domena-krystiana.pl"><i class="fa fa-area-chart"></i>Statystyki poczty</a></li>
+			</ul>
+		</div>
+
+		<div id="submenu-backup" class="submenu-wrap">
+			<div class="submenu-title">BACKUP</div>
+			<ul>
+				<li><a class="btn-anim" id="create-backups" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup"><i class="fa fa-repeat"></i>Utwórz backup</a></li>
+			</ul>
+		</div>
+
+
+	</div>
+	<div class="clear"></div>
+
+</nav>
+
 
 <div id="main-content" class="container-fluid sidebar-wide">
 
@@ -267,67 +268,63 @@
 		</div>
 
 
-		<div id="container">
+		<div id="container"> {% block container %}{% endblock %}
 
-        {% block container %}
-
-        {% endblock %}
-
-        </div>
-		<!--- endo of #container -->
-
-		<footer class="wide front-page">
-			<div class="footer-bar">
-				<div class="col-lg-3 footer-box color1 col-1400-6">
-					<div class="logo"></div>
-					<p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
-				</div>
-				<div class="col-lg-3 footer-box color2 col-1400-hide">
-					<p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
-				</div>
-				<div class="icons">
-					<div class="icon icon1"></div>
-					<div class="icon icon2"></div>
-					<div class="icon icon3"></div>
-					<div class="icon icon4"></div>
-					<div class="icon icon5"></div>
-					<div class="icon icon6"></div>
-					<div class="icon icon7"></div>
-					<div class="icon icon8"></div>
-				</div>
 			</div>
+			<!--- endo of #container -->
 
-		</footer>
-	</div>
-	<!--- endo of container-fluid -->
+			<footer class="wide front-page">
+				<div class="footer-bar">
+					<div class="col-lg-3 footer-box color1 col-1400-6">
+						<div class="logo"></div>
+						<p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
+					</div>
+					<div class="col-lg-3 footer-box color2 col-1400-hide">
+						<p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
+					</div>
+					<div class="icons">
+						<div class="icon icon1"></div>
+						<div class="icon icon2"></div>
+						<div class="icon icon3"></div>
+						<div class="icon icon4"></div>
+						<div class="icon icon5"></div>
+						<div class="icon icon6"></div>
+						<div class="icon icon7"></div>
+						<div class="icon icon8"></div>
+					</div>
+				</div>
 
-
-	<div id="qtip-5" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-5-content" aria-hidden="true" data-qtip-id="5" style="z-index: 15001;">
-		<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
-			<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+			</footer>
 		</div>
-		<div class="qtip-content" id="qtip-5-content" aria-atomic="true">STATYSTYKI</div>
-	</div>
-	<div id="qtip-0" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="true" data-qtip-id="0" style="z-index: 15002;">
-		<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
-			<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+		<!--- endo of container-fluid -->
+
+
+		<div id="qtip-5" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-5-content" aria-hidden="true" data-qtip-id="5" style="z-index: 15001;">
+			<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
+				<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+			</div>
+			<div class="qtip-content" id="qtip-5-content" aria-atomic="true">STATYSTYKI</div>
 		</div>
-		<div class="qtip-content" id="qtip-0-content" aria-atomic="true">Wyloguj</div>
-	</div>
-	<div id="qtip-1" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-1-content" aria-hidden="true" data-qtip-id="1" style="z-index: 15003;">
-		<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
-			<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+		<div id="qtip-0" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="true" data-qtip-id="0" style="z-index: 15002;">
+			<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
+				<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+			</div>
+			<div class="qtip-content" id="qtip-0-content" aria-atomic="true">Wyloguj</div>
 		</div>
-		<div class="qtip-content" id="qtip-1-content" aria-atomic="true">Zmiana hasła</div>
-	</div>
+		<div id="qtip-1" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-1-content" aria-hidden="true" data-qtip-id="1" style="z-index: 15003;">
+			<div class="qtip-tip" style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px; top: -6px;">
+				<canvas style="background-color: transparent !important; border: 0px none !important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+			</div>
+			<div class="qtip-content" id="qtip-1-content" aria-atomic="true">Zmiana hasła</div>
+		</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
 
 
-	<script>
+		<script>
 
-		$(function () {
+			$(function () {
 
 $('#sidebar-switcher').click(function () {
 toggleSideBar();
@@ -605,13 +602,11 @@ $(this).val($(this).val().replace(/demo.com/g, 'am1.pl'));
 $(this).html($(this).html().replace(/domain=am1.pl/g, 'domain=demo.com'));
 });
 };
-	</script>
+		</script>
 
 
-{# {% block javascripts_bottom %}
+		{# {% block javascripts_bottom %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
 <link href="{{ asset('js/js_main.js') }}">
-{% endblock %} #}
-
-{% endblock %}
+{% endblock %} #}{% endblock %}
