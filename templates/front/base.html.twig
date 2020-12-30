@@ -34,12 +34,12 @@
 <header id="main-header">
 	<a class="wide" id="logo" href="#">
 		<div id="logo-icon"></div>
-		<div id="logo-cms">testowa-domena-krystiana.pl email uzytkownika</div>
+		<div id="logo-cms">{{ app.user.username }}</div>
 	</a>
 	{# let href=# #}
 	<a class="header-button btn-anim" id="sidebar-switcher" href="#"></a>
 
-	<a class="header-button qtip-on btn-anim" id="user-logout" href="#" data-hasqtip="0" oldtitle="Wyloguj" title="" aria-describedby="qtip-0">
+	<a class="header-button qtip-on btn-anim" id="user-logout" href="{{path('app_logout')}}" data-hasqtip="0" oldtitle="Wyloguj" title="" aria-describedby="qtip-0">
 		<i class="fa fa-sign-out"></i>
 		<span class="hidden-xs-down">Wyloguj</span>
 	</a>
@@ -49,22 +49,19 @@
 	<a
 		class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="#" data-hasqtip="2" oldtitle="klewandowski" title="">
 
-		<!--        <img src="/IMG_AVATAR"> -->
 		<i class="fa fa-user"></i>
-		klewandowski
+		{{ app.user.name }} {{ app.user.surname }}
 	</a>
 
 </header>
 <nav id="main-sidebar" class="wide sm-hidden">
 	<div id="user-box">
-		<a id="user-avatar" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl"><img src="AM1%20-%20ALP%20MANAGEMENT%20SYSTEM%20-%20127.0.0.1_pliki/IMG_AVATAR.png"></a>
+		<a id="user-avatar" href="{{ path('app_login') }}"><img src="#"></a>
 		<div id="user-menu">
 			<p class="welcome">DZIEŃ DOBRY</p>
-			<p class="welcome-desc">Witamy w systemie do zarządzania kontem testowa-domena-krystiana.pl</p>
-			<!--            <p class="user-last-login">Ostatnie logowanie: 21.02.2016 10:23</p>-->
-			<!--            <a class="user-logout" href="/CMD_LOGOUT"><i class="fa fa-sign-out"></i> Wyloguj</a>-->
-			<a class="user-messages" href="https://panel.am1.pl/CMD_TICKET?domain=testowa-domena-krystiana.pl&amp;sort1=-1">
-
+			<p class="welcome-desc">Witamy w systemie do zarządzania kontem {{ app.user.username }}</p>
+			{# koperta na gorze po lewej #}
+			<a class="user-messages" href="#">
 				<i class="fa fa-envelope"></i>
 			</a>
 		</div>
@@ -72,7 +69,7 @@
 
 	<ul id="main-buttons">
 		<li>
-			<a class="main-button active" data-submenu="dashboard" id="bt-dashboard" href="https://panel.am1.pl/HTM_INDEX_USER?domain=testowa-domena-krystiana.pl">
+			<a class="main-button active" data-submenu="dashboard" id="bt-dashboard" href="{{ path('front_main_page') }}">
 				<i class="fa fa-home"></i>
 				<span>MOJE KONTO</span>
 			</a>

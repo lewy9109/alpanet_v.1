@@ -40,6 +40,7 @@ security:
             guard:
                 authenticators:
                     - App\Security\LoginFormAuthenticator
+                    
 
 
 
