@@ -1,0 +1,16 @@
+php bin/console doctrine:schema:drop -n -q --force --full-database &&
+rm src/Migrations/*.php &&
+php bin/console make:migration &&
+php bin/console doctrine:migrations:migrate -n -q &&
+php bin/console doctrine:fixtures:load -n -q
+
+ form_login: true
+                check_path: login
+                login_path: login
+                csrf_token_generator: security.csrf.token_manager
+    # logout:
+    #     path: logout
+    # remember_me:
+    #     secret: '%kernel.secret%'
+    #     lifetime: 604800 #1 week in seconds
+    #     path: /

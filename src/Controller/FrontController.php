@@ -16,9 +16,8 @@ class FrontController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('front/index2.html.twig', [
-            'controller_name' => 'FrontController',
-        ]);
+       
+        return $this->render('front/main_panel.html.twig');
     }
 
     

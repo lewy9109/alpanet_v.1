@@ -7,20 +7,23 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Model\User;
 
+use Exception;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+
 class LoginController extends AbstractController
 {
     /**
-     * @Route("/", name="login_front")
+     * @Route("/login-front", name="login_front")
      */
-    public function login(): Response
+    public function login(AuthenticationUtils $helper): Response
     {
         return $this->render('login/login_front.html.twig', [
-            'controller_name' => 'LoginController',
+            'error' => $helper->getLastAuthenticationError(),
         ]);
     }
-
+  
     /**
-     * @Route("/forget-password", name="forget_password")
+     * @Route("/forget-password-front", name="forget_password_front")
      */
     public function forgetPassword(): Response
     {
@@ -30,16 +33,6 @@ class LoginController extends AbstractController
         ]);
     }
 
-     /**
-     * @Route("/sing-In", name="sing_in")
-     */
-    public function SingIn(): Response
-    {
-       echo "siema";
-       dump($_POST);
-       $user = User::authenticate($_POST['email'], $_POST['password']);
-       dump($user);
-   
-        return $this->redirectToRoute('front_main_page');
-    }
+     
+
 }

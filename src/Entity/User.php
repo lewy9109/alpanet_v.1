@@ -5,8 +5,12 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity; //UniqueEntity
+use Symfony\Component\Validator\Constraints as Assert; //validator html forms
 
 /**
+ * @ORM\Table(name="users")
+ * @UniqueEntity("email")
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
 class User implements UserInterface
@@ -19,6 +23,8 @@ class User implements UserInterface
     private $id;
 
     /**
+     * Assert\NotBlank(message = "Proszę podać prawidłowy adres e-mail")
+     * Assert\Email()
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -29,6 +35,8 @@ class User implements UserInterface
     private $roles = [];
 
     /**
+     * Assert\NotBlank(message = "Proszę podać prawidłowe hasło")
+     * Assert\Length(max=4096)
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
@@ -40,11 +48,13 @@ class User implements UserInterface
     private $company_name;
 
     /**
+     * Assert\NotBlank(message = "Proszę wprowadzić imię")
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
+     * Assert\NotBlank(message = "Proszę wprowadzić nazwisko")
      * @ORM\Column(type="string", length=255)
      */
     private $surname;
@@ -55,9 +65,12 @@ class User implements UserInterface
     private $phone;
 
     /**
+     * 
      * @ORM\Column(type="date")
      */
     private $date_add;
+    //@Assert\DateTime
+    // * @var string A "Y-m-d" formatted value
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)

@@ -17,13 +17,31 @@ security:
         main:
             anonymous: true
             lazy: true
-            provider: app_user_provider
+            provider: app_user_provider 
+            
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
+            # form_login: true
+            #  # The route name that the login form submits to
+            #  check_path: login_front
+            #  login_path: login_front
+            #  #csrf_token_generator: security.csrf.token_manager
+            #  default_target_path: front_main_page
+            #  username_parameter: _email
+            #  password_parameter: _password
+            #always_use_default_target_path: false
+            logout:
+                path: app_logout
+                target: app_login
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+
+
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
