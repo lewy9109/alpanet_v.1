@@ -1,0 +1,133 @@
+{% extends 'front/base.html.twig' %}
+
+{% block container %}
+	<div>
+		<h1>Lista Pracowników:</h1>
+
+	</div>
+	<div class="well">
+		<div>
+			<a href="#">
+				<button class="btn btn-primary">
+					<i class="fa fa-plus"></i>
+					Dodaj Pracownika
+				</button>
+			</a>
+		</div>
+		<div id="dbaccounts" class="table-responsive-wrapper">
+			<table class="list table-highlight table table-bordered table-responsive2" id="myTable">
+				<thead>
+					<tr>
+						<th scope="col" class="col1"></th>
+						<th scope="col" class="col1 thpointer" onclick="sortTable(1)">Imię
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>
+						</th>
+						<th scope="col" class="col1 thpointer" onclick="sortTable(2)">Nazwisko
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>
+						</th>
+						<th scope="col" class="col1">E-mail</th>
+						<th scope="col" class="col1">Telefon</th>
+						<th scope="col" class="col1 thpointer" onclick="sortTable(5)">Data dodania pracownika
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					{# {% for employee in employees %} #}
+						<tr>
+							<td>
+								<div class="imgA">
+									{# {% if  employee.img != NULL %} #}
+										{# <div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/{{ employee.img }}" style="height: 40px;"> #}
+										</div>
+									{# {% else %} #}
+										<div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/userdefalut.png" style="height: 40px;">
+										</div>
+									{# {% endif %} #}
+								</div>
+							</td>
+							<td>
+								{{ app.user.name }}
+							</td>
+							<td>
+								{# {{ employee.surname }} #}
+							</td>
+
+							<td>
+								{# {{ employee.email }} #}
+							</td>
+							<td>
+								{# {{ employee.phone }} #}
+							</td>
+							<td>
+								{# {{ employee.date_add }} #}
+							</td>
+
+							<td style="max-width: 4.7rem;">
+								{# <a href="/editEmployee/index?id={{ employee.id }}"> #}
+									<button class="btn btn-primary">Edytuj</button>
+								{# </a> #}
+
+								{# <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal" data-id="{{ employee.id }}" data-name="{{ employee.name }}" data-surname="{{ employee.surname }}">
+									Usuń
+								</button> #}
+                                <button type="button" class="btn btn-danger delete"> Usuń</button>
+							</td>
+
+						</tr>
+					{# {% endfor %} #}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Modal  Flash Messages-->
+	{# {% if flash_message is not empty %}
+		<div class="modal fade" id="successModalCenter" tabindex="-1" role="dialog" aria-labelledby="successModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						{% for messages in flash_message %}
+
+							{{ messages }}
+
+						{% endfor %}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %} #}
+
+	<!-- Modal -->
+{# 
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Usuń pracownika</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<p>Czy na pewno chcesz usunąć pracownika:
+						<div class="modal-employe"></div>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+					<a class="deleteUser" href="#">
+						<button type="button" class="btn btn-primary">Usuń</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> #}
+
+{% endblock %}

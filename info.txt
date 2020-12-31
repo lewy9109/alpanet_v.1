@@ -1,3 +1,42 @@
 https://panel.am1.pl/CMD_SHOW_DOMAIN?domain=testowa-domena-krystiana.pl
 OQbxXl2FmTr6Y
 klewandowski
+
+<div id="submenu-dashboard" class="submenu-wrap active">
+			<div class="submenu-title">MOJE KONTO</div>
+			<ul>
+				<li>
+					<a class="btn-anim" id="password" href="#">
+						<i class="fa fa-key"></i>
+						Zmiana hasła</a>
+				</li>
+				<!--                <li><a id="login-history" href="/CMD_LOGIN_HISTORY?domain=testowa-domena-krystiana.pl&section=dashboard"><i class="fa fa-history"></i> Historia logowań</a></li>-->
+				<li>
+					<a class="btn-anim" id="support-center" href="#">
+						<i class="fa fa-key fm-m"></i>
+						Kategorie</a>
+				</li>
+			</ul>
+		</div>
+		<div id="submenu-employee" class="submenu-wrap">
+			<div class="submenu-title">PRACOWNICY</div>
+			<ul>
+				<li><a class="btn-anim"  href="#"><i class="fa fa-users"></i>Dodaj pracownika</a></li>
+
+				<li><a class="btn-anim"  href="{{ path('front_employee_list') }}"><i class="fa fa-forward"></i>Lista pracowników</a></li>
+				
+			</ul>
+		</div>
+
+        <li>
+			<a class="main-button active" data-submenu="dashboard" id="bt-dashboard" href="{{ path('front_main_page') }}">
+				<i class="fa fa-home"></i>
+				<span>MOJE KONTO</span>
+			</a>
+		</li>
+		<li>
+			<a class="main-button" data-submenu="employee" id="bt-employee" href="{{ path('front_employee_list') }}">
+				<i class="fa fa-users"></i>
+				<span>PRACOWNICY</span>
+			</a>
+		</li>

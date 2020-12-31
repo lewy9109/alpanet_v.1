@@ -20,5 +20,13 @@ class FrontController extends AbstractController
         return $this->render('front/main_panel.html.twig');
     }
 
+    /**
+     * @Route("/employee-list", name="front_employee_list")
+     */
+    public function employeList(): Response
+    {
+        return $this->render('front/employee_list.html.twig');
+    }
+
     
 }
