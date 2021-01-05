@@ -34,7 +34,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					{# {% for employee in employees %} #}
+					{% for employee in employees %}
 						<tr>
 							<td>
 								<div class="imgA">
@@ -48,20 +48,20 @@
 								</div>
 							</td>
 							<td>
-								{{ app.user.name }}
+								{{ employee.name }}
 							</td>
 							<td>
-								{# {{ employee.surname }} #}
+								{{ employee.surname }}
 							</td>
 
 							<td>
-								{# {{ employee.email }} #}
+								{{ employee.email }}
 							</td>
 							<td>
-								{# {{ employee.phone }} #}
+								{{ employee.phone }}
 							</td>
 							<td>
-								{# {{ employee.date_add }} #}
+								{# {{ employee.date_add|date('Y-m-d') }} #}
 							</td>
 
 							<td style="max-width: 4.7rem;">
@@ -76,7 +76,7 @@
 							</td>
 
 						</tr>
-					{# {% endfor %} #}
+					{% endfor %}
 				</tbody>
 			</table>
 		</div>

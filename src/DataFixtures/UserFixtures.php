@@ -37,7 +37,9 @@ class UserFixtures extends Fixture
     {
         $date = new \DateTime();
         return[
-            ['lewy@gmail.com', '123456', 'kryst', 'lewand', ['ROLE_ADMIN'], 'firma', '456', $date, '/img.png']
+            ['lewy@gmail.com', '123456', 'kryst', 'lewand', ['ROLE_ADMIN'], 'firma', '456', $date, '/img.png'],
+            ['lewy1@gmail.com', '123456', 'damian', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png'],
+            ['lewy2@gmail.com', '123456', 'damian', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png']
         ];
     }
 }

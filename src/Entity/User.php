@@ -66,7 +66,7 @@ class User implements UserInterface
 
     /**
      * 
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", type="datetime")
      */
     private $date_add;
     //@Assert\DateTime
