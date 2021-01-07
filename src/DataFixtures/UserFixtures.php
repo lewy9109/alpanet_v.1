@@ -39,7 +39,10 @@ class UserFixtures extends Fixture
         return[
             ['lewy@gmail.com', '123456', 'kryst', 'lewand', ['ROLE_ADMIN'], 'firma', '456', $date, '/img.png'],
             ['lewy1@gmail.com', '123456', 'damian', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png'],
-            ['lewy2@gmail.com', '123456', 'damian', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png']
+            ['lewy2@gmail.com', '123456', 'damian', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png'],
+            ['lewy3@gmail.com', '123456', 'jan', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png'],
+            ['lewy4@gmail.com', '123456', 'tomek', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png'],
+            ['lewy5@gmail.com', '123456', 'krzys', 'lewand', ['ROLE_MODERATOR'], 'firma', '456', $date, '/img.png']
         ];
     }
 }

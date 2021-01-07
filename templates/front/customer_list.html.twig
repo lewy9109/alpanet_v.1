@@ -18,6 +18,10 @@
 			<table class="list table-highlight table table-bordered table-responsive2" id="myTable">
 				<thead>
 					<tr>
+                        <th scope="col" class="col1 thpointer" onclick="sortTable(0)">Nazwa firmy <i
+                                class="fa fa-arrow-down" aria-hidden="true"></i></th>
+                        <th scope="col" class="col1 thpointer" onclick="sortTable(1)">Nazwa domeny <i
+                            class="fa fa-arrow-down" aria-hidden="true"></i></th>
 						<th scope="col" class="col1"></th>
 						<th scope="col" class="col1 thpointer" onclick="sortTable(1)">Imię
 							<i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -27,7 +31,9 @@
 						</th>
 						<th scope="col" class="col1">E-mail</th>
 						<th scope="col" class="col1">Telefon</th>
-						<th scope="col" class="col1 thpointer" onclick="sortTable(5)">Data dodania pracownika
+                        <th scope="col" class="col1">Wykupiony pakiet (godz.)</th>
+                        <th scope="col" class="col1">Okres Rozliczenia</th>
+						<th scope="col" class="col1 thpointer" onclick="sortTable(5)">Data dodania klienta
 							<i class="fa fa-arrow-down" aria-hidden="true"></i>
 						</th>
 
@@ -37,15 +43,10 @@
 					{% for user in users %}
 						<tr>
 							<td>
-								<div class="imgA">
-									{# {% if  user.img != NULL %} #}
-										{# <div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/{{ user.img }}" style="height: 40px;"> #}
-										</div>
-									{# {% else %} #}
-										<div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/userdefalut.png" style="height: 40px;">
-										</div>
-									{# {% endif %} #}
-								</div>
+								{{ user.company_name }}
+							</td>
+                            <td>
+								{{ user.domain }}
 							</td>
 							<td>
 								{{ user.name }}

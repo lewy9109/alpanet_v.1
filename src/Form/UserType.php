@@ -16,6 +16,8 @@ class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        //$user = $options['user'];
+
         $builder
             ->add('email', EmailType::class)
             ->add('password', RepeatedType::class, array(
@@ -28,12 +30,19 @@ class UserType extends AbstractType
            // ->add('date_add')
            // ->add('img', FileType::class)
         ;
+
+        // if ($user && in_array('ROLE_USER', $user->getRoles())) {
+        //     $builder->add('company_name', TextType::class,[
+        //         'empty_data'=>''
+        //     ]);
+        // }
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+            //'user'=>null
         ]);
     }
 }
