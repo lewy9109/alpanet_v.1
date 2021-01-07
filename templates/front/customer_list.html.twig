@@ -22,7 +22,6 @@
                                 class="fa fa-arrow-down" aria-hidden="true"></i></th>
                         <th scope="col" class="col1 thpointer" onclick="sortTable(1)">Nazwa domeny <i
                             class="fa fa-arrow-down" aria-hidden="true"></i></th>
-						<th scope="col" class="col1"></th>
 						<th scope="col" class="col1 thpointer" onclick="sortTable(1)">Imię
 							<i class="fa fa-arrow-down" aria-hidden="true"></i>
 						</th>
@@ -46,7 +45,7 @@
 								{{ user.company_name }}
 							</td>
                             <td>
-								{{ user.domain }}
+								{# {{ user.domain }} #}
 							</td>
 							<td>
 								{{ user.name }}
@@ -64,11 +63,20 @@
 							<td>
 								{# {{ user.date_add|date('Y-m-d') }} #}
 							</td>
-
-							<td style="max-width: 4.7rem;">
-								{# <a href="/edituser/index?id={{ user.id }}"> #}
+                            <td>
+								{# {{ user.date_add|date('Y-m-d') }} #}
+							</td>
+                            <td>
+								{# {{ user.date_add|date('Y-m-d') }} #}
+							</td>
+                            <td>
+									{# <a href="/edituser/index?id={{ user.id }}"> #}
 									<button class="btn btn-primary">Edytuj</button>
 								{# </a> #}
+							</td>
+
+							<td style="max-width: 4.7rem;">
+							
 
 								{# <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal" data-id="{{ user.id }}" data-name="{{ user.name }}" data-surname="{{ user.surname }}">
 									Usuń
