@@ -6,7 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\User;
+use App\Entity\CustomerDomain;
 use App\Form\UserType;
+use App\Form\CustomerType;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -63,6 +65,11 @@ class FrontController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
+            $this->addFlash(
+                'Sukces',
+                'Dodano pracownika'
+            );
+
             return $this->redirectToRoute('front_employee_list');
         }
         return $this->render('front/admin_add_employee.html.twig', [
@@ -96,13 +103,10 @@ class FrontController extends AbstractController
         $form = $this->createForm(UserType::class);
         $form->handleRequest($request);
         $is_invalid = false;
-        // $this->addFlash(
-        //     'succes',
-        //     'Twoje zmiany zostały zapisane'
-        // );
+ 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->addFlash(
-                'succes',
+                'Sukces',
                 'Twoje zmiany zostały zapisane'
             );
             $this->redirectToRoute('front_employee_list');
@@ -114,6 +118,8 @@ class FrontController extends AbstractController
             'is_invalid'=>$is_invalid
         ]);
     }
+
+
 
      /**
      * @Route("/customer-list", name="front_customer_list")
@@ -131,32 +137,47 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/add-employee", name="admin_add_employee")
+     * @Route("/add-customer", name="admin_add_customer")
      */
     public function addCustomer(Request $request, UserPasswordEncoderInterface $encode_password): Response
     {
         $user = new User();
-        $form = $this->createForm(UserType::class, $user);
+        $customerDomain = new CustomerDomain;
+
+        $form = $this->createForm(CustomerType::class, $user);
         $form->handleRequest($request);
+        dump($request);
         if($form->isSubmitted() && $form->isValid())
         {
+
             $entityManager = $this->getDoctrine()->getManager();
 
             $user->setName($request->request->get('user')['name']);
             $user->setSurname($request->request->get('user')['surname']);
             $user->setEmail($request->request->get('user')['email']);
             $user->setPhone($request->request->get('user')['phone']);
-            $user->setRoles(['ROLE_MODERATOR']);
+            $user->setRoles(['ROLE_USER']);
             $password = $encode_password->encodePassword($user, $request->request->get('user')['password']['first']);
             $user->setPassword($password);
             $date = new \DateTime();
             $user->setDateAdd($date);
+            $user->setCompanyName($request->request->get('user')['company_name']);
+  
+            $customerDomain->setNameDomain($request->request->get('user')['customerDomains']);
+            $user->addCustomerDomain($customerDomain);
+
+            $entityManager->persist($customerDomain);
             $entityManager->persist($user);
             $entityManager->flush();
 
-            return $this->redirectToRoute('front_employee_list');
+            $this->addFlash(
+                'Sukces',
+                'Dodano Klienta'
+            );
+
+            return $this->redirectToRoute('front_customer_list');
         }
-        return $this->render('front/admin_add_employee.html.twig', [
+        return $this->render('front/admin_add_customer.html.twig', [
             'form'=>$form->createView(),
         ]);
     }

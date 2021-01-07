@@ -6,10 +6,29 @@
 
 		{# <form method="POST" action="#" enctype="multipart/form-data"> #}
             {{ form_start(form,{'attr':{'novalidate':'novalidate', 'class':'needs-validation'}}) }}
-			
+				
+				<div class="form-group">
+					<label for="user_company_name">Nazwa Firmy</label>
+                    {{form_widget(form.company_name)}}
+                    
+                    <div class="invalid-feedback">
+                        {{form_errors(form.company_name)}}
+                    </div>
+				</div>
+
+				<div class="form-group">
+					<label for="customerDomains_name_domain">Nazwa domeny</label>
+                    {{form_widget(form.customerDomains)}}
+                    
+                    <div class="invalid-feedback">
+                        {{form_errors(form.customerDomains)}}
+                    </div>
+				</div>
+
+				
+
 				<div class="form-group">
 					<label for="user_name">Imię</label>
-					{# <input type="text" class="form-control" name="name" id="inputName" value="" autofocus/> #}
                     {{form_widget(form.name)}}
                     
                     <div class="invalid-feedback">
@@ -20,7 +39,6 @@
 			
 				<div class="form-group">
 					<label for="user_surname">Nazwisko</label>
-					{# <input type="text" class="form-control" name="surname" id="inputSurname" value=""/> #}
                        {{form_widget(form.surname)}}
                     <div class="invalid-feedback">
                         {{form_errors(form.surname)}}
@@ -30,7 +48,6 @@
 
 				<div class="form-group">
 					<label for="user_email">E-mail</label>
-					{# <input type="email" class="form-control" name="email" id="inputEmail" value=""/> #}
                       {{form_widget(form.email)}}
                     <div class="invalid-feedback">
                         {{form_errors(form.email)}}
@@ -41,7 +58,6 @@
 
 			<div class="form-group">
 				<label for="user_phone">Telefon</label>
-				{# <input type="text" class="form-control" name="phone"  id="phone" value=""/> #}
                    {{form_widget(form.phone)}}
                     <div class="invalid-feedback">
                         {{form_errors(form.phone)}}
@@ -51,7 +67,6 @@
 		
 				<div class="form-group">
 					<label for="user_password_first">Hasło</label>
-					{# <input type="password" class="form-control" name="password" value="" id="inputPassword" value=""/> #}
                     {{form_widget(form.password.first)}}
                     <div class="invalid-feedback">
                         {{form_errors(form.password.first)}}
@@ -61,7 +76,6 @@
 
 			<div class="form-group">
 				<label for="user_password_second">Powtórz hasło</label>
-				{# <input type="password" class="form-control" name="password2" value="" id="inputRepeatPassword"/> #}
                 {{form_widget(form.password.second)}}
                     <div class="invalid-feedback">
                         {{form_errors(form.password.second)}}

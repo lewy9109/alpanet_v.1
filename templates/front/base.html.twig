@@ -79,7 +79,7 @@
 				</a>
 			</li>
 			<li>
-				<a class="main-button" data-submenu="customer" id="bt-customer" href="#">
+				<a class="main-button" data-submenu="customer" id="bt-customer" href="{{ path('front_customer_list') }}">
 					<i class="fa fa-users fa-2x fmt"></i>
 					<span>KLIENCI</span>
 				</a>
@@ -134,9 +134,9 @@
 			<div id="submenu-customer" class="submenu-wrap">
 				<div class="submenu-title">KLIENCI</div>
 				<ul>
-					<li><a class="btn-anim" href="#"><i class="fa fa-user-plus fm-m"></i>Dodaj klienta</a></li>
+					<li><a class="btn-anim" href="{{ path('admin_add_customer') }}"><i class="fa fa-user-plus fm-m"></i>Dodaj klienta</a></li>
 
-					<li><a class="btn-anim" href="#"><i class="fa fa-list-ul fm-m"></i>Lista klientów</a></li>
+					<li><a class="btn-anim" href="{{ path('front_customer_list') }}"><i class="fa fa-list-ul fm-m"></i>Lista klientów</a></li>
 
 					<li><a class="btn-anim" href="#"><i class="fa fa-plus fm-m"></i>Dodaj pakiet</a></li>
 				</ul>
