@@ -1,0 +1,666 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Pakiet Pomocna Dłoń
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/qtip.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/qtip.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block stylesheets2 %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://kit.fontawesome.com/5402199d6e.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div id="landsacpe-hint">
+        <div id="logo"></div>
+        <div id="pict"></div>
+        <p>Obróć swoje urządzenie do pozycji pionowej</p>
+    </div>
+
+    <header id="main-header">
+        <a class="wide" id="logo" href="#">
+            <div id="logo-icon"></div>
+            <div id="logo-cms">lewy@gmail.com</div>
+
+        </a>
+        <a class="header-button btn-anim" id="sidebar-switcher" href="#"></a>
+
+        <a class="header-button qtip-on btn-anim" id="user-logout" href="{{path('app_logout')}}" data-hasqtip="0" oldtitle="Wyloguj" title="" aria-describedby="qtip-0">
+            <i class="fa fa-sign-out"></i>
+            <span class="hidden-xs-down">Wyloguj</span>
+        </a>
+        <a class="header-button buttons-sm-up qtip-on btn-anim" id="password-bt" href="#" data-hasqtip="1" oldtitle="Zmiana hasła" title="" aria-describedby="qtip-1">
+            <i class="fa fa-unlock-alt"></i>
+            Hasło</a>
+        <a class="header-button buttons-sm-up qtip-on btn-anim" id="user-avatar" href="#" data-hasqtip="2" oldtitle="klewandowski" title="">
+
+            <i class="fa fa-user"></i>
+            krystian
+            lewandowski
+        </a>
+
+    </header>
+    <nav id="main-sidebar" class="wide sm-hidden">
+        <div id="user-box">
+            <a id="user-avatar" href="{{ path('app_login') }}"><img src="#"></a>
+            <div id="user-menu">
+                <p class="welcome">DZIEŃ DOBRY</p>
+                <p class="welcome-desc">Witamy w systemie do zarządzania kontem
+
+                    krystian</p>
+                {# koperta na gorze po lewej #}
+                <a class="user-messages" href="#">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul id="main-buttons">
+            <li>
+                <a class="main-button" data-submenu="dashboard" id="bt-dashboard" href="{{ path('front_main_page') }}">
+                    <i class="fa fa-home"></i>
+                    <span>MOJE KONTO</span>
+                </a>
+            </li>
+            <li>
+                <a class="main-button" data-submenu="employee" id="bt-employee" href="{{ path('front_employee_list') }}">
+                    <i class="fa fa-users"></i>
+                    <span>PRACOWNICY</span>
+                </a>
+            </li>
+            <li>
+                <a class="main-button" data-submenu="customer" id="bt-customer" href="{{ path('front_customer_list') }}">
+                    <i class="fa fa-users fa-2x fmt"></i>
+                    <span>KLIENCI</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="main-button" data-submenu="mail-pakiet" id="bt-mail-pakiet" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>POCZTA PAKIET</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a class="main-button" data-submenu="mail-centrum" id="bt-mail-centrum" href="#">
+                    <i class="fa fa-database"></i>
+                    <span>POCZTA CENTRUM</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="main-button" data-submenu="stats" id="bt-stats" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl">
+                    <i class="fa fa-bar-chart"></i>
+                    <span>STATYSTYKI</span>
+                </a>
+            </li>
+            <li>
+                <a class="main-button" data-submenu="backup" id="bt-backup" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup">
+                    <i class="fa fa-clone"></i>
+                    <span>BACKUP</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="submenu">
+            <div id="submenu-dashboard" class="submenu-wrap active">
+                <div class="submenu-title">MOJE KONTO</div>
+                <ul>
+                    <li><a class="btn-anim" id="password" href="#"><i class="fa fa-key"></i>Zmiana hasła</a></li>
+                    <li><a class="btn-anim" id="support-center" href="#"><i class="fa fa-key fm-m"></i>Kategorie</a></li>
+                </ul>
+            </div>
+            <div id="submenu-employee" class="submenu-wrap">
+                <div class="submenu-title">PRACOWNICY</div>
+                <ul>
+                    <li><a class="btn-anim"href="{{ path('admin_add_employee') }}"><i class="fa fa-users"></i>Dodaj pracownika</a></li>
+
+                    <li><a class="btn-anim"href="{{ path('front_employee_list') }}"><i class="fa fa-list-ul fm-m"></i>Lista pracowników</a></li>
+                </ul>
+            </div>
+
+            <div id="submenu-customer" class="submenu-wrap">
+                <div class="submenu-title">KLIENCI</div>
+                <ul>
+                    <li><a class="btn-anim" href="{{ path('admin_add_customer') }}"><i class="fa fa-user-plus fm-m"></i>Dodaj klienta</a></li>
+
+                    <li><a class="btn-anim" href="{{ path('front_customer_list') }}"><i class="fa fa-list-ul fm-m"></i>Lista klientów</a></li>
+
+                    <li><a class="btn-anim" href="#"><i class="fa fa-plus fm-m"></i>Dodaj pakiet</a></li>
+                </ul>
+            </div>
+
+            <div id="submenu-mail-pakiet" class="submenu-wrap">
+                <div class="submenu-title">POCZTA</div>
+                <ul>
+                    <li><a class="btn-anim" href="#"><i class="fa fa-database"></i>Napisz do nas</a></li>
+                    <li><a class="btn-anim" href="#"><i class="fa fa-plus"></i>Skrzynka odbiorcza</a></li>
+                </ul>
+            </div>
+
+
+            <div id="submenu-mail-centrum" class="submenu-wrap">
+                <div class="submenu-title">POCZTA CENTRUM</div>
+                <ul>
+                    <li><a class="btn-anim" href="#"><i class="fa fa-globe"></i>Skrzynka odbiorcza</a></li>
+
+                </ul>
+            </div>
+
+            <div id="submenu-stats" class="submenu-wrap">
+                <div class="submenu-title">STATYSTYKI</div>
+                <ul>
+                    <li><a class="btn-anim" id="site-sum-stats-log" href="https://panel.am1.pl/CMD_USER_STATS?domain=testowa-domena-krystiana.pl"><i class="fa fa-pie-chart"></i>Statystyki serwisu</a></li>
+                    <li><a class="btn-anim" id="email-usage" href="https://panel.am1.pl/CMD_EMAIL_USAGE?domain=testowa-domena-krystiana.pl"><i class="fa fa-area-chart"></i>Statystyki poczty</a></li>
+                </ul>
+            </div>
+
+            <div id="submenu-backup" class="submenu-wrap">
+                <div class="submenu-title">BACKUP</div>
+                <ul>
+                    <li><a class="btn-anim" id="create-backups" href="https://panel.am1.pl/CMD_SITE_BACKUP?domain=testowa-domena-krystiana.pl&amp;section=backup"><i class="fa fa-repeat"></i>Utwórz backup</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </nav>
+
+
+    <div id="main-content" class="container-fluid sidebar-wide">
+
+        <div id="front-page">
+            <div class="header-1">
+                <div class="left col-xl-6">
+                    <span class="title">AM1.PL</span>
+                    <span class="subtitle">(ALP MANAGEMENT SYSTEM)</span>
+                </div>
+                <div class="right col-xl-6" id="title-buttons-bar">
+                    <div id="title-buttons" class="pull-xl-right pull-xs-left">
+                        <a class="title-button active qtip-on btn-anim" id="panel-bt" href="http://am1.pl/" target="_blank" data-hasqtip="3" oldtitle="Alp
+													Management System" title="">
+                            <i class="fa fa-tasks"></i>
+                            <span class="hidden-md-down">AM1</span>
+                        </a>
+                        <a class="title-button qtip-on btn-anim" id="cms-bt" href="http://av1.pl/" target="_blank" data-hasqtip="4" oldtitle="Alp Visual System" title="">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span class="hidden-md-down">AV1</span>
+                        </a>
+
+                        <a class="title-button qtip-on btn-anim" id="stats-bt" href="https://panel.am1.pl/CMD_AWSTATS/testowa-domena-krystiana.pl/awstats.pl" target="_blank" data-hasqtip="5" oldtitle="STATYSTYKI" title="" aria-describedby="qtip-5">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="hidden-md-down">STATYSTYKI</span>
+                        </a>
+
+                        <a class="title-button qtip-on btn-anim" id="webmail-bt" href="https://poczta.am1.pl/" target="_blank" data-hasqtip="6" oldtitle="Poczta" title="">
+                            <i class="fa fa-envelope"></i>
+                            <span class="hidden-md-down">Poczta</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header-2">
+                <div class="col-lg-6" id="domain-switch">
+                    <div>
+						<span class="domain">Domena:
+						</span>
+                        <form id="form-domain">
+                            <fieldset class="form-group">
+                                <select class="form-control" id="domain-select">
+                                    <option selected="selected">testowa-domena-krystiana.pl</option>
+                                </select>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" id="header-user">
+                    <div class="pull-lg-right">
+                        <span class="owner">Właściciel konta</span>
+                        <span class="login">Login:
+							<strong>klewandowski</strong>
+						</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div id="container">
+
+                {% block container %}{% endblock %}
+
+            </div>
+            <!--- endo of #container -->
+
+            <footer class="wide front-page">
+                <div class="footer-bar">
+                    <div class="col-lg-3 footer-box color1 col-1400-6">
+                        <div class="logo"></div>
+                        <p>PANEL ZARZĄDZANIA SYSTEMEM<br>ALP MANAGEMENT SYSTEM</p>
+                    </div>
+                    <div class="col-lg-3 footer-box color2 col-1400-hide">
+                        <p>PROWADZONY PRZEZ<br>ALPANET - POLSKIE SYSTEMY INTERNETOWE</p>
+                    </div>
+                    <div class="icons">
+                        <div class="icon icon1"></div>
+                        <div class="icon icon2"></div>
+                        <div class="icon icon3"></div>
+                        <div class="icon icon4"></div>
+                        <div class="icon icon5"></div>
+                        <div class="icon icon6"></div>
+                        <div class="icon icon7"></div>
+                        <div class="icon icon8"></div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+        <!--- endo of container-fluid -->
+
+
+        <div id="qtip-5" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-5-content" aria-hidden="true" data-qtip-id="5" style="z-index: 15001;">
+            <div class="qtip-tip" style="background-color: transparent !important; border:
+								0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px;
+								top: -6px;">
+                <canvas style="background-color: transparent !important; border: 0px none
+									!important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+            </div>
+            <div class="qtip-content" id="qtip-5-content" aria-atomic="true">STATYSTYKI</div>
+        </div>
+        <div id="qtip-0" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="true" data-qtip-id="0" style="z-index: 15002;">
+            <div class="qtip-tip" style="background-color: transparent !important; border:
+								0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px;
+								top: -6px;">
+                <canvas style="background-color: transparent !important; border: 0px none
+									!important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+            </div>
+            <div class="qtip-content" id="qtip-0-content" aria-atomic="true">Wyloguj</div>
+        </div>
+        <div id="qtip-1" class="qtip qtip-default qtip-tipsy qtip-pos-tr" tracking="true" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-1-content" aria-hidden="true" data-qtip-id="1" style="z-index: 15003;">
+            <div class="qtip-tip" style="background-color: transparent !important; border:
+								0px none !important; width: 6px; height: 6px; line-height: 6px; right: 5px;
+								top: -6px;">
+                <canvas style="background-color: transparent !important; border: 0px none
+									!important; width: 6px; height: 6px;" width="6" height="6"></canvas>
+            </div>
+            <div class="qtip-content" id="qtip-1-content" aria-atomic="true">Zmiana hasła</div>
+        </div>
+    </div>
+
+    {# modal #}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <!-- The Modal -->
+            <div
+                    id="myModalMessage" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content2">
+                    <div class="modal-header2">
+                        <span onclick="closeModal()" class="close2">&times;</span>
+                        {{label}}
+                    </div>
+                    <div class="modal-body2">
+                        <p>{{message}}</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}
+
+	{% block javascripts_bottom %}
+
+        {# <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> #}
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script>
+
+            $(function () {
+
+                $('#sidebar-switcher').click(function () {
+                    toggleSideBar();
+                });
+
+                var toggleSideBar = function () {
+                    $("#main-sidebar").toggleClass("wide");
+                    $("#main-content").toggleClass("sidebar-wide");
+                    $("#logo").toggleClass("wide");
+                    $("footer").toggleClass("wide");
+                };
+
+                /*
+                                 * SIDEBAR MENU
+                                 */
+
+                if ($(window).width() >= 768) {
+                    $('ul#main-buttons > li > .main-button').click(function (event) {
+                        $('ul#main-buttons > li > .main-button').removeClass('active');
+                        $(this).addClass('active');
+                        $('#submenu > .submenu-wrap').removeClass('active');
+                        $('#submenu > #submenu-' + $(this).data('submenu')).addClass('active');
+                        $('ul#main-buttons > li > .main-button.active-tmp').removeClass('active-tmp');
+// event.preventDefault();
+                    });
+
+                    $('ul#main-buttons > li > .main-button').hover(function () {
+                        $('#submenu > .submenu-wrap').hide();
+                        $('#submenu > #submenu-' + $(this).data('submenu')).show();
+                        $('ul#main-buttons > li > .main-button.active-tmp').removeClass('active-tmp');
+                        if (!$(this).hasClass('active')) {
+                            $(this).addClass('active-tmp');
+                        }
+                    });
+
+                    $('#submenu').hover(null, function () {
+                        $('#submenu > .submenu-wrap').hide();
+                        $('#submenu > .active').show();
+                        $('ul#main-buttons > li > .main-button.active-tmp').removeClass('active-tmp');
+                    });
+                } else {
+                    $('ul#main-buttons > li > .main-button').click(function (event) {
+                        $('ul#main-buttons > li > .main-button.active').removeClass('active');
+                        $(this).addClass('active');
+                        $('#submenu > .submenu-wrap.active').removeClass('active');
+                        $('#submenu > #submenu-' + $(this).data('submenu')).addClass('active');
+                        event.preventDefault();
+                    });
+                }
+
+                /**
+                 * QTIP
+                 */
+                $('.qtip-on').qtip({
+                    style: {
+                        classes: 'qtip-tipsy'
+                    },
+                    position: {
+                        my: 'top right',
+                        target: 'mouse',
+                        adjust: {
+                            x: 5,
+                            y: 25
+                        }
+                    }
+                });
+
+                /**
+                 * Replace demo.com with am1.pl
+                 */
+                var user = 'klewandowski';
+                if (user === 'demo_user') {
+                    replaceDemo();
+                }
+
+                /**
+                 * zoom fx
+                 */
+                $('#pie-chart .tlo').addClass('zoom');
+
+            });
+
+            var setActiveSidebar = function (submenu, item) {
+                $('ul#main-buttons > li > .main-button, #submenu > .submenu-wrap').removeClass('active');
+                $('ul#main-buttons > li > .main-button[data-submenu="' + submenu + '"]').addClass('active');
+                $('#submenu > #submenu-' + submenu).addClass('active');
+                $('#submenu > #submenu-' + submenu + ' > ul > li #' + item).addClass('active');
+            };
+
+            var $_GET = {};
+            var parseGetParameters = function () {
+                document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+                    function decode(s) {
+                        return decodeURIComponent(s.split("+").join(" "));
+                    }
+
+                    $_GET[decode(arguments[1])] = decode(arguments[2]);
+                });
+            };
+
+
+            var wrapTable = function ($table) {
+                var $headRow = $('tr', $table).first();
+                $headRow.remove();
+
+                if (! $table.has('tbody')) {
+                    var $otherRows = $('tr', $table);
+                    $otherRows.remove();
+
+                    var $tbody = $('<tbody>');
+                    $table.append($tbody);
+                    $tbody.append($otherRows);
+                }
+
+                var $thead = $('<thead>');
+                $table.prepend($thead);
+                $thead.append($headRow);
+
+                $table.find("thead > tr > td").each(function () {
+                    $(this).replaceWith('<th>' + $(this).html() + '</th>');
+                });
+
+                tableHeaders = [];
+                $table.find('thead > tr > th .listtitle').each(function (i) {
+                    tableHeaders[i] = $(this).text() + ': ';
+
+                });
+                $table.find("tbody > tr").each(function () {
+                    $(this).find('td').each(function (i) {
+                        $(this).attr('data-content', tableHeaders[i]);
+                    });
+
+                });
+
+                $table.addClass('table table-striped table-bordered table-responsive2');
+            };
+
+            var wrapForm = function (form) {
+                var inputs = $('select, input', form);
+                inputs.addClass('form-control');
+                inputs.css('width', 'auto');
+                inputs.css('display', 'inline-block');
+                inputs.css('margin-right', '20px');
+            };
+
+            var getDefaultDomain = function () {
+                var domainsTable;
+                var defaultDomain;
+                $.ajax({
+                    url: "/CMD_ADDITIONAL_DOMAINS",
+                    type: "get",
+                    async: false,
+                    success: function (data) {
+                        domainsTable = $(data).find('table');
+                    }
+                });
+                if (domainsTable != '') {
+                    $('tr', domainsTable).first().remove();
+                    $('tr', domainsTable).first().remove();
+                    defaultDomain = domainsTable.find('b').text();
+                }
+                return defaultDomain;
+            };
+
+            var getDomains = function () {
+                var domainsTable;
+                var domains = [];
+                $.ajax({
+                    url: "/CMD_ADDITIONAL_DOMAINS",
+                    type: "get",
+                    async: false,
+                    success: function (data) {
+                        domainsTable = $(data).find('table');
+                    }
+                });
+                if (domainsTable != '') {
+                    $('tr', domainsTable).first().remove();
+                    $('tr', domainsTable).first().remove();
+                    $('tr', domainsTable).last().remove();
+                    $('tr', domainsTable).each(function () {
+                        domains.push($(this).children('td').first().children('a').text());
+                    });
+                }
+                return domains;
+            };
+
+            var getLastMessage = function () {
+                var user = 'klewandowski';
+                if (user === 'demo_user') {
+                    return $('<a href="#">Witamy w systemie AM1.PL</a>');
+                }
+                var messagesTable;
+                $.ajax({
+                    url: "CMD_TICKET?domain=none&sort1=-1",
+                    type: "get",
+                    async: false,
+                    success: function (data) {
+                        messagesTable = $(data).find('table').last();
+                    }
+                });
+                message = messagesTable.find('tbody tr:nth-child(3) td a').first();
+                if (message.length != 0) {
+                    return message;
+                } else {
+                    return 'Brak komunikatĂłw';
+                }
+
+            };
+
+            var getLastCmd = function () {
+                var referrer = document.referrer;
+                referrer = referrer.replace('http://', '');
+                referrer = referrer.replace('https://', '');
+                lastChar = referrer.indexOf("?") ? referrer.indexOf("?") : referrer.length;
+                return referrer.substring(referrer.indexOf("/") + 1, lastChar);
+            };
+
+            var getLastSection = function () {
+                cmd = getLastCmd();
+                cmdMap = {
+                    HTM_ADD_DOMAIN: [
+                        'domains', 'add-domain'
+                    ],
+                    HTM_EMAIL_POP_CREATE: [
+                        'email', 'pop-create'
+                    ],
+                    HTM_EMAIL_POP_MODIFY: [
+                        'email', 'pop-email-accounts'
+                    ],
+                    CMD_EMAIL_POP: [
+                        'email', 'pop-email-accounts'
+                    ],
+                    HTM_EMAIL_FORWARDER_CREATE: [
+                        'email', 'forwarders'
+                    ],
+                    HTM_EMAIL_AUTORESPONDER_CREATE: [
+                        'email', 'autoresponders'
+                    ],
+                    CMD_EMAIL_VACATION_CREATE: [
+                        'email', 'vac-messages'
+                    ],
+                    HTM_PASSWD: [
+                        'dashboard', 'password'
+                    ],
+                    CMD_DOMAIN_POINTER: [
+                        'domains', 'domain-pointers'
+                    ],
+                    CMD_SUBDOMAIN: [
+                        'domains', 'subdomain-managment'
+                    ],
+                    CMD_CHANGE_DOMAIN: [
+                        'domains', 'chenge-domain'
+                    ],
+                    HTM_FTP_CREATE: [
+                        'ftp', 'create-ftp'
+                    ],
+                    CMD_FTP: [
+                        'ftp', 'create-ftp'
+                    ],
+                    CMD_DOMAIN: [
+                        'domains', 'domain-setup'
+                    ],
+                    CMD_ADDITIONAL_DOMAINS: ['domains', 'domain-setup']
+                };
+
+                return cmdMap[cmd];
+            };
+
+            var replaceDemo = function () {
+                $('#logo-cms, a, td, .input-group-addon, option, .form-control, .welcome-desc').each(function () {
+                    $(this).html($(this).html().replace(/demo.com/g, 'am1.pl'));
+                    $(this).html($(this).html().replace('DOMAIN=am1.pl', 'domain=demo.com'));
+                    $(this).html($(this).html().replace('@demo.com', '@am1.pl'));
+                    $(this).val($(this).val().replace(/demo.com/g, 'am1.pl'));
+                    $(this).html($(this).html().replace(/domain=am1.pl/g, 'domain=demo.com'));
+                });
+            };
+        </script>
+        <script>
+
+            // Get the modal
+            var modal = document.getElementById("myModalMessage");
+            modal.style.display = "block";
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = $(".close2");
+
+            // When the user clicks the button, open the modal
+            {# btn.onclick = function() {
+  modal.style.display = "block";
+} #}
+            {# $(window).on('load', function () {
+	modal.style.display = "block";
+}); #}
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            function closeModal() {
+                document.getElementsByClassName("close2")[0];
+            }
+
+
+        </script>
+    {% endblock %}

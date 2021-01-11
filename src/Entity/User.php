@@ -71,25 +71,14 @@ class User implements UserInterface
      * @ORM\Column(type="date", type="datetime")
      */
     private $date_add;
-    //@Assert\DateTime
-    // * @var string A "Y-m-d" formatted value
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $img;
 
-    /**
-     * @ORM\OneToMany(targetEntity=CustomerDomain::class, mappedBy="user")
-     */
-    private $customerDomains;
 
-    public function __construct()
-    {
-        $this->customerDomains = new ArrayCollection();
-    }
-
-   
 
     public function getId(): ?int
     {
@@ -237,36 +226,6 @@ class User implements UserInterface
     public function setImg(?string $img): self
     {
         $this->img = $img;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|CustomerDomain[]
-     */
-    public function getCustomerDomains(): Collection
-    {
-        return $this->customerDomains;
-    }
-
-    public function addCustomerDomain(CustomerDomain $customerDomain): self
-    {
-        if (!$this->customerDomains->contains($customerDomain)) {
-            $this->customerDomains[] = $customerDomain;
-            $customerDomain->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCustomerDomain(CustomerDomain $customerDomain): self
-    {
-        if ($this->customerDomains->removeElement($customerDomain)) {
-            // set the owning side to null (unless already changed)
-            if ($customerDomain->getUser() === $this) {
-                $customerDomain->setUser(null);
-            }
-        }
 
         return $this;
     }
