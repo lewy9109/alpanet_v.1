@@ -6723,3 +6723,21 @@ option{
   background-color: #5cb85c;
   color: white;
 }
+.padding-right-zero{
+  padding-right: 0px;
+}
+.padding-left-zero{
+  padding-left: 0px;
+}
+.container-fluid{
+  padding-right: 0px;
+  padding-left: 0px;
+  width: auto;
+}
+#main-content {
+  background: #fff;
+  top: 41px;
+  position: relative;
+  margin-left: 90px;
+  min-height: calc(100vh - 41px);
+}
