@@ -41,7 +41,7 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @Assert\NotBlank(message = "Proszę podać prawidłowe hasło")
+     *
      * @Assert\Length(max=4096)
      * @var string The hashed password
      * @ORM\Column(type="string")
@@ -82,6 +82,21 @@ class User implements UserInterface
      */
     private $img;
 
+    /**
+     * @ORM\OneToMany(targetEntity=CustomerDomain::class, mappedBy="user")
+     */
+    private $customerDomains;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Pakiet::class, mappedBy="user", cascade={"persist", "remove"})
+     */
+    private $pakiet;
+
+    public function __construct()
+    {
+        $this->customerDomains = new ArrayCollection();
+    }
+
 
 
     public function getId(): ?int
@@ -118,7 +133,7 @@ class User implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles[] = '';
 
         return array_unique($roles);
     }
@@ -230,6 +245,58 @@ class User implements UserInterface
     public function setImg(?string $img): self
     {
         $this->img = $img;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|CustomerDomain[]
+     */
+    public function getCustomerDomains(): Collection
+    {
+        return $this->customerDomains;
+    }
+
+    public function addCustomerDomain(CustomerDomain $customerDomain): self
+    {
+        if (!$this->customerDomains->contains($customerDomain)) {
+            $this->customerDomains[] = $customerDomain;
+            $customerDomain->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCustomerDomain(CustomerDomain $customerDomain): self
+    {
+        if ($this->customerDomains->removeElement($customerDomain)) {
+            // set the owning side to null (unless already changed)
+            if ($customerDomain->getUser() === $this) {
+                $customerDomain->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getPakiet(): ?Pakiet
+    {
+        return $this->pakiet;
+    }
+
+    public function setPakiet(?Pakiet $pakiet): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($pakiet === null && $this->pakiet !== null) {
+            $this->pakiet->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($pakiet !== null && $pakiet->getUser() !== $this) {
+            $pakiet->setUser($this);
+        }
+
+        $this->pakiet = $pakiet;
 
         return $this;
     }

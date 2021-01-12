@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a686999e-54b1-4541-bf93-4a7cd83ef281" name="Default Changelist" comment="fix">
-      <change afterPath="$PROJECT_DIR$/templates/admin/admin_edit_user.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alpanet_v.1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alpanet_v.1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CustomerAddType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CustomerType.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/admin_add_customer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_add_customer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/admin_add_employee.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_add_employee.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/admin_edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CustomerDomainRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CustomerDomainsRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admin_add_customer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_add.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/base2.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/customer_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/customer_list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/employee_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/employee_list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/main_panel.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/main_panel.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +164,8 @@
       <workItem from="1610115287478" duration="11378000" />
       <workItem from="1610207202217" duration="2156000" />
       <workItem from="1610371371673" duration="200000" />
-      <workItem from="1610372059423" duration="13784000" />
+      <workItem from="1610372059423" duration="15382000" />
+      <workItem from="1610438119062" duration="24609000" />
     </task>
     <servers />
   </component>
