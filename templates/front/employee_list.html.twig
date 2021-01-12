@@ -3,11 +3,11 @@
 {% block container %}
 	<div>
 		<h1>Lista Pracowników:</h1>
-	</div>
 
+	</div>
 	<div class="well">
 		<div>
-			<a href="{{path('admin_add_employee')}}">
+			<a href="#">
 				<button class="btn btn-primary">
 					<i class="fa fa-plus"></i>
 					Dodaj Pracownika
@@ -34,12 +34,12 @@
 					</tr>
 				</thead>
 				<tbody>
-					{% for user in users %}
+					{# {% for employee in employees %} #}
 						<tr>
 							<td>
 								<div class="imgA">
-									{# {% if  user.img != NULL %} #}
-										{# <div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/{{ user.img }}" style="height: 40px;"> #}
+									{# {% if  employee.img != NULL %} #}
+										{# <div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/{{ employee.img }}" style="height: 40px;"> #}
 										</div>
 									{# {% else %} #}
 										<div class="imgAvatar" style="width: 3rem;"><img src="/img/avatar/userdefalut.png" style="height: 40px;">
@@ -48,40 +48,86 @@
 								</div>
 							</td>
 							<td>
-								{{ user.companyName }}
+								{{ app.user.name }}
 							</td>
 							<td>
-								{{ user.surname }}
+								{# {{ employee.surname }} #}
 							</td>
 
 							<td>
-								{{ user.email }}
+								{# {{ employee.email }} #}
 							</td>
 							<td>
-								{{ user.phone }}
+								{# {{ employee.phone }} #}
 							</td>
 							<td>
-								{# {{ user.date_add|date('Y-m-d') }} #}
+								{# {{ employee.date_add }} #}
 							</td>
 
 							<td style="max-width: 4.7rem;">
-								{# <a href="/edituser/index?id={{ user.id }}"> #}
+								{# <a href="/editEmployee/index?id={{ employee.id }}"> #}
 									<button class="btn btn-primary">Edytuj</button>
 								{# </a> #}
 
-								{# <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal" data-id="{{ user.id }}" data-name="{{ user.name }}" data-surname="{{ user.surname }}">
+								{# <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal" data-id="{{ employee.id }}" data-name="{{ employee.name }}" data-surname="{{ employee.surname }}">
 									Usuń
 								</button> #}
-								
                                 <button type="button" class="btn btn-danger delete"> Usuń</button>
-								<a href="{{path('admin_delete', {'id':user.id})}}">Usuń2 </a>
-								<a href="{{path('admin_edit', {'id':user.id})}}">edytuj 2 </a>
 							</td>
 
 						</tr>
-					{% endfor %}
+					{# {% endfor %} #}
 				</tbody>
 			</table>
 		</div>
 	</div>
+
+	<!-- Modal  Flash Messages-->
+	{# {% if flash_message is not empty %}
+		<div class="modal fade" id="successModalCenter" tabindex="-1" role="dialog" aria-labelledby="successModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						{% for messages in flash_message %}
+
+							{{ messages }}
+
+						{% endfor %}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %} #}
+
+	<!-- Modal -->
+{# 
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Usuń pracownika</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<p>Czy na pewno chcesz usunąć pracownika:
+						<div class="modal-employe"></div>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+					<a class="deleteUser" href="#">
+						<button type="button" class="btn btn-primary">Usuń</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> #}
+
 {% endblock %}
