@@ -3,17 +3,22 @@
 namespace App\Controller;
 
 use App\Entity\CustomerDomain;
+use App\Entity\Pakiet;
 use App\Entity\User;
 use App\Form\CustomerAddType;
 use App\Form\UserCustomerType;
 use App\Form\UserPakietType;
 use App\Form\UserType;
-use Doctrine\ORM\EntityManagerInterface;
+
+use App\Service\PakietManage;
+
+use Doctrine\DBAL\Types\DateType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * @Route("/admin", )
@@ -107,6 +112,7 @@ class AdminController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $entityManager = $this->getDoctrine()->getManager();
+
             $user->setName($request->request->get('user_customer')['name']);
             $user->setSurname($request->request->get('user_customer')['surname']);
             $user->setEmail($request->request->get('user_customer')['email']);
@@ -124,7 +130,6 @@ class AdminController extends AbstractController
             $entityManager->persist($user);
             $entityManager->persist($customerDomain);
 
-           // dd($customerDomain, $user);
             $entityManager->flush();
 
 
@@ -145,10 +150,49 @@ class AdminController extends AbstractController
     /**
      * @Route ("/add-pakiet", name="admin_add_pakiet")
      */
-    public function addPakiet(Request $request, EntityManagerInterface $entityManager)
+    public function addPakiet(Request $request, PakietManage $pakietManage)
     {
+
+
         $form = $this->createForm(UserPakietType::class);
         $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+
+            $pakiet = new Pakiet();
+
+//            $user = $this->getDoctrine()->getRepository(User::class)
+//                ->findBy(array('email'=>$data['user']));
+            $user = $data->getUser();
+//            dd($data->getUser());
+//            dd($user);
+
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $pakiet->setPakietStart($data->getPakietStart());
+            $pakiet->setSettlement($data->getSettlement());
+
+            $pakiet_end = $pakietManage->validateBilingTime($data->getPakietStart()->format('Y-m-d'), $data->getSettlement());
+            $pakiet_end = new \DateTime($pakiet_end);
+            $pakiet->setPakietEnd($pakiet_end);
+
+            $pakiet->setPakietTime($data->getPakietTime());
+
+            $pakiet->setStatusPakiet("Aktywny");
+
+            $user->setPakiet($pakiet);
+
+            $entityManager->persist($pakiet);
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            return $this->render('admin/admin_add.html.twig', [
+                'form'=>$form->createView(),
+            ]);
+        }
+
+
         return $this->render('admin/admin_add.html.twig', [
             'form'=>$form->createView(),
         ]);

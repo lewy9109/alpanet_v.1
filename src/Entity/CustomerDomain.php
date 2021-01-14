@@ -20,6 +20,7 @@ class CustomerDomain
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="customerDomains")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 
@@ -56,4 +57,12 @@ class CustomerDomain
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return (string) $this->getUser();
+    }
+
+
+
 }

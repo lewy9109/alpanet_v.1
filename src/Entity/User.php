@@ -71,7 +71,7 @@ class User implements UserInterface
     private $phone;
 
     /**
-     * 
+     *
      * @ORM\Column(type="date", type="datetime")
      */
     private $date_add;
@@ -96,7 +96,6 @@ class User implements UserInterface
     {
         $this->customerDomains = new ArrayCollection();
     }
-
 
 
     public function getId(): ?int
@@ -299,6 +298,10 @@ class User implements UserInterface
         $this->pakiet = $pakiet;
 
         return $this;
+    }
+    public function __toString()
+    {
+        return (string) $this->getCompanyName();
     }
 
 }

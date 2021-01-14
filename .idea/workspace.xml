@@ -4,14 +4,16 @@
     <list default="true" id="a686999e-54b1-4541-bf93-4a7cd83ef281" name="Default Changelist" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CustomerDomain.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CustomerDomain.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CustomerAddType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CustomerType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CustomerDomainRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CustomerDomainsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin_add_customer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserPakietType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserPakietType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CustomerDomainRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CustomerDomainRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PakietRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PakietRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Flash.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +167,7 @@
       <workItem from="1610207202217" duration="2156000" />
       <workItem from="1610371371673" duration="200000" />
       <workItem from="1610372059423" duration="15382000" />
-      <workItem from="1610438119062" duration="24609000" />
+      <workItem from="1610438119062" duration="39811000" />
     </task>
     <servers />
   </component>

@@ -51,6 +51,13 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         return $qb->getQuery()->getResult();
     }
 
+//    public function findAllCustomerWithoutPakiet()
+//    {
+//        return $this->createQueryBuilder('u')
+//            ->orderBy('u.name', 'ASC')
+//            ->getQuery()
+//            ->execute();
+//    }
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

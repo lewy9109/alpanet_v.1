@@ -20,7 +20,7 @@ class PakietRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Pakiet[] Returns an array of Pakiet objects
+    //  * @return PakietManage[] Returns an array of PakietManage objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class PakietRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Pakiet
+    public function findOneBySomeField($value): ?PakietManage
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')

@@ -19,6 +19,15 @@ class CustomerDomainRepository extends ServiceEntityRepository
         parent::__construct($registry, CustomerDomain::class);
     }
 
+    public function findAllCustomerWithoutPakiet()
+    {
+        $user = $this->getDoctrine()
+            ->getRepository(CustomerDomain::class)
+            ->findAll();
+
+        return $user;
+    }
+
     // /**
     //  * @return CustomerDomain[] Returns an array of CustomerDomain objects
     //  */
